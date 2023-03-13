@@ -1,6 +1,7 @@
-1. [[Arrays and Hashing#[Contains Duplicate (217)](https://leetcode.com/problems/contains-duplicate/) |Contains Duplicate 3/11/23]]
-2. [[Arrays and Hashing#[Valid Anagram (242)](https://leetcode.com/problems/valid-anagram/)|Valid Anagram #242 3/11/23]]
-3. [[Arrays and Hashing#[Two Sum (1)](https://leetcode.com/problems/two-sum/) |Two Sum 9/9/22]]
+1. [[Arrays and Hashing#[Contains Duplicate (217)](https://leetcode.com/problems/contains-duplicate/) |Contains Duplicate - 03/11/2023]]
+2. [[Arrays and Hashing#[Valid Anagram (242)](https://leetcode.com/problems/valid-anagram/)|Valid Anagram - 03/11/2023]]
+3. [[Arrays and Hashing#[Two Sum (1)](https://leetcode.com/problems/two-sum/) |Two Sum - 09/09/2022]]
+4. [[Arrays and Hashing#[Group Anagrams (49)](https://leetcode.com/problems/group-anagrams/description/) |Group Anagram - 03/12/2023]]
 
 
 
@@ -130,6 +131,45 @@ public int[] twoSum(int[] nums, int target) {
 	return indices;
 }
 ```
+
+
+---
+## [Group Anagrams (49)](https://leetcode.com/problems/group-anagrams/description/)
+###### *03/12/2023*
+
+
+###### Psuedo Code
+``` 
+# initialize an empty dictionary, anagrams
+
+# for each string, str, in strs
+	# initialize sorted_string to str sorted alphabetically
+	
+	# if sorted_string does not exists as a key in anagrams
+		# add it as a key
+	
+	# add str to anagrams[sorted_string]
+
+# return the values of anagrams converted to a list
+```
+
+###### Python Solution
+```
+def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+
+	anagrams = {}
+
+	for str in strs:
+		sorted_string = "".join(sorted(str))
+		
+		if sorted_string not in anagrams:
+			anagrams[sorted_string] = []
+
+		anagrams[sorted_string].append(str)
+
+	return list(anagrams.values())
+```
+
 
 
 ---
