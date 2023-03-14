@@ -9,7 +9,6 @@
 ## [Contains Duplicate (217)](https://leetcode.com/problems/contains-duplicate/)
 ###### *3/11/23*
 
-
 ###### Psuedo Code
 ``` 
 # iterate through the list
@@ -45,7 +44,6 @@ return False
 ---
 ## [Valid Anagram (242)](https://leetcode.com/problems/valid-anagram/)
 ###### *3/11/23*
-
 
 ###### Psuedo Code
 ```
@@ -95,7 +93,6 @@ return True
 ---
 ## [Two Sum (1)](https://leetcode.com/problems/two-sum/)
 ###### *9/9/22*
-
 
 ###### Psuedo Code
 ```

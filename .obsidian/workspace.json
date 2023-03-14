@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays and Hashing.md",
+                "file": "Algorithms.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arrays and Hashing.md",
+                "file": "Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arrays and Hashing.md",
+                "file": "Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arrays and Hashing.md"
+                "file": "Algorithms.md"
               }
             }
           }
@@ -156,9 +156,11 @@
   },
   "active": "6d99075ee18c6f76",
   "lastOpenFiles": [
-    "Leetcode.md",
     "Arrays and Hashing.md",
     "Question Template.md",
+    "Alogrithm Template.md",
+    "Algorithms.md",
+    "Table of Contents.md",
     "*Question Template*.md",
     "link.md",
     "Two Sum (1).md",

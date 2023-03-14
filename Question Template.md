@@ -1,6 +1,5 @@
-## [Name (Number)](Leetcode)
+## [Name (Number)](Table%20of%20Contents.md)
 ###### *xx/xx/xxxx*
-
 
 ###### Psuedo Code
 ``` 
