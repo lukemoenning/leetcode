@@ -3,6 +3,7 @@
 3. [[Arrays and Hashing#[Two Sum (1)](https://leetcode.com/problems/two-sum/) |Two Sum - 09/09/2022]]
 4. [[Arrays and Hashing#[Group Anagrams (49)](https://leetcode.com/problems/group-anagrams/description/) |Group Anagram - 03/12/2023]]
 5. [[Arrays and Hashing#[Top K Frequent Elements (347)](https://leetcode.com/problems/top-k-frequent-elements/description/) |Top K Frequent Elements - 03/15/2023]]
+6. [[Arrays and Hashing#[Product of Array Except Self (238)]( https://leetcode.com/problems/product-of-array-except-self/description/) |Product of Array Except Self - 03/15/2023]]
 
 
 
@@ -202,6 +203,38 @@ for i in range(len(bucket_sort)-1, 0, -1):
 		k_most_frequent.append(number)
 		if len(k_most_frequent) == k:
 			return k_most_frequent
+```
+
+
+
+---
+## [Product of Array Except Self (238)]( https://leetcode.com/problems/product-of-array-except-self/description/)
+###### *03/15/2023*
+
+###### Psuedo Code
+``` 
+# initialize an array of length n set to values 1 where n is the length of nums
+
+# for each index multiple it by the product of the values to its left side
+
+# for each index multiple it by the product of the values to its right side
+```
+
+###### Python Solution
+```
+answer = [1]*len(nums)
+
+product_from_left = 1
+for i in range(len(answer)):
+	answer[i] *= product_from_left
+	product_from_left *= nums[i]
+
+product_from_right = 1
+for i in range(len(answer) - 1, -1, -1):
+	answer[i] *= product_from_right
+	product_from_right *= nums[i]
+
+return answer
 ```
 
 
