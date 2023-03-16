@@ -14,7 +14,7 @@ Divide and Conquer recurisive alogrithm
 1. Pick a partition: most commonly the last index.
 2. Seperate all values less than that partition on the left and all values greater on the right
 3. Place the partition in its sorted place
-4. Repeat for the left values and the right values
+4. Repeat for the values left of the current partition and right of the current partition
 ```
 
 ###### Runtime Complexity

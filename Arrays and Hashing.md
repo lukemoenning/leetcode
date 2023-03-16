@@ -2,6 +2,7 @@
 2. [[Arrays and Hashing#[Valid Anagram (242)](https://leetcode.com/problems/valid-anagram/)|Valid Anagram - 03/11/2023]]
 3. [[Arrays and Hashing#[Two Sum (1)](https://leetcode.com/problems/two-sum/) |Two Sum - 09/09/2022]]
 4. [[Arrays and Hashing#[Group Anagrams (49)](https://leetcode.com/problems/group-anagrams/description/) |Group Anagram - 03/12/2023]]
+5. [[Arrays and Hashing#[Top K Frequent Elements (347)](https://leetcode.com/problems/top-k-frequent-elements/description/) |Top K Frequent Elements - 03/15/2023]]
 
 
 
@@ -165,6 +166,42 @@ def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 		anagrams[sorted_string].append(str)
 
 	return list(anagrams.values())
+```
+
+
+
+---
+## [Top K Frequent Elements (347)](https://leetcode.com/problems/top-k-frequent-elements/description/)
+###### *03/15/2023*
+
+###### Psuedo Code
+``` 
+# initialize an empty dictionary, num_appearances
+
+# initialize a list of n empty sets where n is the number length of nums. the set stored at index k in the list will contain the numbers that appear k times
+
+# return the k most numbers starting from the last index of the array
+```
+
+###### Python Solution
+```
+# initialize the bucket sort
+bucket_sort = [set() for i in range(len(nums)+1)]
+
+# count the number of appearances for each int in nums
+num_appearances = Counter(nums)
+
+# sort each count into its proper bucket
+for number, index in num_appearances.items():
+	bucket_sort[index].add(number)
+
+# return the k right most indexed items
+k_most_frequent = []
+for i in range(len(bucket_sort)-1, 0, -1):
+	for number in bucket_sort[i]:
+		k_most_frequent.append(number)
+		if len(k_most_frequent) == k:
+			return k_most_frequent
 ```
 
 
