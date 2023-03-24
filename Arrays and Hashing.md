@@ -4,6 +4,7 @@
 4. [[Arrays and Hashing#[Group Anagrams (49)](https://leetcode.com/problems/group-anagrams/description/) |Group Anagram - 03/12/2023]]
 5. [[Arrays and Hashing#[Top K Frequent Elements (347)](https://leetcode.com/problems/top-k-frequent-elements/description/) |Top K Frequent Elements - 03/15/2023]]
 6. [[Arrays and Hashing#[Product of Array Except Self (238)]( https://leetcode.com/problems/product-of-array-except-self/description/) |Product of Array Except Self - 03/15/2023]]
+7. [[Arrays and Hashing#[Valid Sudoku (36)](https://leetcode.com/problems/valid-sudoku/description/) |Valid Sudoku - 03/24/2023]]
 
 
 
@@ -235,6 +236,58 @@ for i in range(len(answer) - 1, -1, -1):
 	product_from_right *= nums[i]
 
 return answer
+```
+
+
+
+---
+## [Valid Sudoku (36)](https://leetcode.com/problems/valid-sudoku/description/)
+###### *03/24/2023*
+
+###### Psuedo Code
+``` 
+# initialize a list of sets for the rows
+# initialize a list of sets for the columns
+# initialize a list of sets for the 3x3s
+
+# iterate through the board
+	# if the current value is '.'
+		# continue
+	# if the current value already exists for any of the three cases
+		# return false
+# return true
+```
+
+###### Python Solution
+```
+N = 9
+
+row_sets = [set() for i in range(N)]
+col_sets = [set() for i in range(N)]
+square_sets = [set() for i in range(N)]
+
+for row in range(N):
+	for col in range(N):
+		
+		current_value = board[row][col]
+		
+		if current_value == '.':
+			continue
+		
+		if current_value in row_sets[row]:
+			return False
+		row_sets[row].add(current_value)
+		
+		if current_value in col_sets[col]:
+			return False
+		col_sets[col].add(current_value)
+		
+		square_index = (row//3) * 3 + (col//3)
+		if current_value in square_sets[square_index]:
+			return False
+		square_sets[square_index].add(current_value)
+
+return True
 ```
 
 
