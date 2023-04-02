@@ -5,6 +5,7 @@
 5. [[Arrays and Hashing#[Top K Frequent Elements (347)](https://leetcode.com/problems/top-k-frequent-elements/description/) |Top K Frequent Elements - 03/15/2023]]
 6. [[Arrays and Hashing#[Product of Array Except Self (238)]( https://leetcode.com/problems/product-of-array-except-self/description/) |Product of Array Except Self - 03/15/2023]]
 7. [[Arrays and Hashing#[Valid Sudoku (36)](https://leetcode.com/problems/valid-sudoku/description/) |Valid Sudoku - 03/24/2023]]
+8. [[Arrays and Hashing#[Encode and Decode Strings (271)](https://leetcode.com/problems/encode-and-decode-strings/description/) |Encode and Decode Strings - 04/02/2023]]
 
 
 
@@ -291,5 +292,62 @@ return True
 ```
 
 
+
+---
+## [Encode and Decode Strings (271)](https://leetcode.com/problems/encode-and-decode-strings/description/)
+###### *04/02/2023*
+
+###### Psuedo Code
+``` 
+# Encode words using the following pattern
+        # Create a variable of the length for the maximun number of characters per string
+        # Append the length of the string, filled with zero so it fits in the maximum, followed by the string itself
+```
+
+###### Python Solution
+```
+max_length = 8
+
+class Codec:
+
+    def encode(self, strs: List[str]) -> str:
+        """Encodes a list of strings to a single string.
+        """
+
+        encoded = ''
+        for string in strs: 
+            encoded += str(len(string)).zfill(max_length)
+            encoded += string
+            
+        return encoded
+        
+
+    def decode(self, s: str) -> List[str]:
+        """Decodes a single string to a list of strings.
+        """
+
+        if len(s) == 0:
+            return ''
+        
+        strs = []
+        index = 0
+        while index < len(s):
+            word_length = int(s[index:index+8])
+            index += 8
+            strs.append(s[index:index+word_length])
+            index += word_length
+
+        return strs
+```
+
+###### Runtime Complexity
+```
+O(N)
+```
+
+###### Space Complexity
+```
+O(N)
+```
 
 ---
