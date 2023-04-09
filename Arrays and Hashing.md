@@ -6,6 +6,7 @@
 6. [[Arrays and Hashing#[Product of Array Except Self (238)]( https://leetcode.com/problems/product-of-array-except-self/description/) |Product of Array Except Self - 03/15/2023]]
 7. [[Arrays and Hashing#[Valid Sudoku (36)](https://leetcode.com/problems/valid-sudoku/description/) |Valid Sudoku - 03/24/2023]]
 8. [[Arrays and Hashing#[Encode and Decode Strings (271)](https://leetcode.com/problems/encode-and-decode-strings/description/) |Encode and Decode Strings - 04/02/2023]]
+9. [[Arrays and Hashing#[Longest Consecutive Sequence (128)](https://leetcode.com/problems/longest-consecutive-sequence/description/) |Longest Consecutive Sequence - 04/09/2023]]
 
 
 
@@ -338,6 +339,52 @@ class Codec:
             index += word_length
 
         return strs
+```
+
+###### Runtime Complexity
+```
+O(N)
+```
+
+###### Space Complexity
+```
+O(N)
+```
+
+---
+## [Longest Consecutive Sequence (128)](https://leetcode.com/problems/longest-consecutive-sequence/description/)
+###### *04/09/2023*
+
+###### Psuedo Code
+``` 
+# Create a set from nums
+# Create a variable for the longest
+# Iterate through the list of nums
+# A number is the start of a sequence if the set does not contain the value before it
+	# For each sequence starting number
+		# Count the length of that sequence
+```
+
+###### Python Solution
+```
+nums_set = set(nums)
+longest = 0
+
+for num in nums:
+
+	if num-1 in nums_set:
+		continue
+
+	runner = num+1
+	current_length = 1
+	while runner in nums_set:
+		current_length += 1
+		runner += 1
+
+	if current_length > longest:
+		longest = current_length
+
+return longest
 ```
 
 ###### Runtime Complexity
