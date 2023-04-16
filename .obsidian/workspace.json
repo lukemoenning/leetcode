@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays and Hashing.md",
+                "file": "Two Pointers.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -179,14 +178,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba463b0029861b0a",
+  "active": "6d99075ee18c6f76",
   "lastOpenFiles": [
-    "Arrays and Hashing.md",
-    "Two Pointers.md",
     "Question Template.md",
+    "Alogrithm Template.md",
+    "Two Pointers.md",
+    "Arrays and Hashing.md",
     "Algorithms.md",
     "Table of Contents.md",
-    "Alogrithm Template.md",
     "*Question Template*.md",
     "link.md",
     "Two Sum (1).md",
