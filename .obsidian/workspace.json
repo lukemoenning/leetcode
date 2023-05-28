@@ -96,6 +96,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "93d1d42562f39ac8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -180,12 +188,12 @@
   },
   "active": "6d99075ee18c6f76",
   "lastOpenFiles": [
-    "Question Template.md",
-    "Alogrithm Template.md",
-    "Two Pointers.md",
-    "Arrays and Hashing.md",
-    "Algorithms.md",
     "Table of Contents.md",
+    "Two Pointers.md",
+    "Question Template.md",
+    "Algorithms.md",
+    "Alogrithm Template.md",
+    "Arrays and Hashing.md",
     "*Question Template*.md",
     "link.md",
     "Two Sum (1).md",

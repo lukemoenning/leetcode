@@ -1,5 +1,6 @@
 1. [[Two Pointers#[Valid Palindrome (125)](https://leetcode.com/problems/valid-palindrome/description/) |Valid Palindrome - 04/09/2023]]
 2. [[Two Pointers#[Two Sum II - Input Array is Sorted (167)](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) ||Two Sum II - 04/16/2023]]
+3. [[Two Pointers#[3Sum (15)](https://leetcode.com/problems/3sum/description/) |3Sum - 05/28/2023]]
 
 
 
@@ -81,6 +82,56 @@ def twoSum(self, numbers: List[int], target: int) -> List[int]:
 ###### Runtime Complexity
 ```
 O(N)
+```
+
+###### Space Complexity
+```
+O(N)
+```
+
+---
+## [3Sum (15)](https://leetcode.com/problems/3sum/description/)
+###### *05/28/2023*
+
+###### Psuedo Code
+``` 
+# sort nums
+# we can't start use the same value for the first number twice, since values are sorted, check that we dont use two of the same values in a row
+# if we have not used the first value, call two sum on the rest of the list
+# add triples consitiing of the two twosum values with the first value, in sorted order
+```
+
+###### Python Solution
+```
+def threeSum(self, nums: List[int]) -> Set[Tuple[int]]:
+	nums.sort()
+	results = set()
+	for index, num in enumerate(nums):
+		if index == 0 or nums[index] != nums[index-1]:
+			self.two_sum(nums[index], nums[index+1:], results)
+
+	return results
+
+def two_sum(self, num: int, array: List[int], results: Set[Tuple[int]]):
+	left, right = 0, len(array)-1
+	target = -num
+	while left<right:
+		sum_of_twos = array[left] + array[right]
+
+		if sum_of_twos == target:
+			tup = tuple(sorted([num, array[left], array[right]]))
+			results.add(tup)
+			left+=1
+			right-=1
+		if sum_of_twos < target:
+			left+=1
+		if sum_of_twos > target:
+			right-=1
+```
+
+###### Runtime Complexity
+```
+O(N^2)
 ```
 
 ###### Space Complexity
