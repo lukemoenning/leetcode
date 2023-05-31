@@ -1,6 +1,7 @@
 1. [[Two Pointers#[Valid Palindrome (125)](https://leetcode.com/problems/valid-palindrome/description/) |Valid Palindrome - 04/09/2023]]
 2. [[Two Pointers#[Two Sum II - Input Array is Sorted (167)](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) ||Two Sum II - 04/16/2023]]
 3. [[Two Pointers#[3Sum (15)](https://leetcode.com/problems/3sum/description/) |3Sum - 05/28/2023]]
+4. [[Two Pointers#[Container With Most Water (11)](https://leetcode.com/problems/container-with-most-water/description/) |Container With Most Water - 05/30/23]]
 
 
 
@@ -137,6 +138,51 @@ O(N^2)
 ###### Space Complexity
 ```
 O(N)
+```
+
+---
+## [Container With Most Water (11)](https://leetcode.com/problems/container-with-most-water/description/)
+###### *05/30/2023*
+
+###### Psuedo Code
+``` 
+# we know the further apart the two walls the more water the container holds
+# two pointers, one at the beginning and other at end
+# use a variable to keep track of max
+# move the shorter one in each time to maximize potential capacity
+```
+
+###### Python Solution
+```
+def maxArea(self, height: List[int]) -> int:
+	max_water = 0
+	left = 0
+	right = len(height) - 1
+	while left < right:
+		distance = right - left
+		shortest_height = min(height[left], height[right])
+		water = distance * shortest_height
+		if water > max_water:
+			max_water = water
+		
+		# move the shorter wall in
+		if height[left]<height[right]:
+			left+=1
+		else:
+			right-=1
+			
+	return max_water
+
+```
+
+###### Runtime Complexity
+```
+O(N)
+```
+
+###### Space Complexity
+```
+O(1)
 ```
 
 ---
