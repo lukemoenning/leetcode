@@ -1,7 +1,8 @@
 1. [[Two Pointers#[Valid Palindrome (125)](https://leetcode.com/problems/valid-palindrome/description/) |Valid Palindrome - 04/09/2023]]
 2. [[Two Pointers#[Two Sum II - Input Array is Sorted (167)](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) ||Two Sum II - 04/16/2023]]
 3. [[Two Pointers#[3Sum (15)](https://leetcode.com/problems/3sum/description/) |3Sum - 05/28/2023]]
-4. [[Two Pointers#[Container With Most Water (11)](https://leetcode.com/problems/container-with-most-water/description/) |Container With Most Water - 05/30/23]]
+4. [[Two Pointers#[Container With Most Water (11)](https://leetcode.com/problems/container-with-most-water/description/) |Container With Most Water - 05/30/2023]]
+5. [[Two Pointers#[Trapping Rain Water (42)](https://leetcode.com/problems/trapping-rain-water/) |Trapping Rain Water - 05/30/2023]]
 
 
 
@@ -43,7 +44,7 @@ def isPalindrome(self, s: str) -> bool:
 
 ###### Runtime Complexity
 ```
-O(N)
+O(n)
 ```
 
 ###### Space Complexity
@@ -82,12 +83,12 @@ def twoSum(self, numbers: List[int], target: int) -> List[int]:
 
 ###### Runtime Complexity
 ```
-O(N)
+O(n)
 ```
 
 ###### Space Complexity
 ```
-O(N)
+O(n)
 ```
 
 ---
@@ -132,12 +133,12 @@ def two_sum(self, num: int, array: List[int], results: Set[Tuple[int]]):
 
 ###### Runtime Complexity
 ```
-O(N^2)
+O(n^2)
 ```
 
 ###### Space Complexity
 ```
-O(N)
+O(n)
 ```
 
 ---
@@ -177,12 +178,36 @@ def maxArea(self, height: List[int]) -> int:
 
 ###### Runtime Complexity
 ```
-O(N)
+O(n)
 ```
 
 ###### Space Complexity
 ```
 O(1)
+```
+
+---
+## [Trapping Rain Water (42)](https://leetcode.com/problems/trapping-rain-water/)
+###### *05/30/2023*
+
+###### Psuedo Code
+``` 
+
+```
+
+###### Python Solution
+```
+
+```
+
+###### Runtime Complexity
+```
+O(_)
+```
+
+###### Space Complexity
+```
+O(_)
 ```
 
 ---

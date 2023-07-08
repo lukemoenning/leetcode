@@ -343,12 +343,12 @@ class Codec:
 
 ###### Runtime Complexity
 ```
-O(N)
+O(n)
 ```
 
 ###### Space Complexity
 ```
-O(N)
+O(n)
 ```
 
 ---
@@ -389,12 +389,12 @@ return longest
 
 ###### Runtime Complexity
 ```
-O(N)
+O(n)
 ```
 
 ###### Space Complexity
 ```
-O(N)
+O(n)
 ```
 
 ---
