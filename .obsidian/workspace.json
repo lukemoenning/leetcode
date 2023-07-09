@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Table of Contents.md",
+                "file": "Stack.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -138,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Two Pointers.md",
+                "file": "Stack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Two Pointers.md",
+                "file": "Stack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +177,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Two Pointers.md"
+                "file": "Stack.md"
               }
             }
           }
@@ -199,18 +198,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "db5c7b5b012bb318",
+  "active": "f2db8f76d6b93b68",
   "lastOpenFiles": [
     "Table of Contents.md",
+    "files/Python Useful Functions.md",
+    "files/templates/Question Template.md",
+    "Stack.md",
+    "files/templates/New File Template.md",
+    "files/questions/Two Pointers.md",
     "files/Algorithms.md",
     "files/questions/Random Questions.md",
-    "files/Python Useful Functions.md",
-    "files/templates/New File Template.md",
     "files/templates/category.md",
-    "files/questions/Two Pointers.md",
     "files/questions/Arrays and Hashing.md",
     "files/templates",
-    "files/templates/Question Template.md",
     "files/templates/Algorithm Template.md",
     "files/questions",
     "files",
@@ -230,7 +230,6 @@
     "Leetcode",
     "History of Popular Music/History of Popular Music.md",
     "Faculty Candidate Talk - Algorithmic Foundations.md",
-    "History of Popular Music/Untitled.md",
     "Untitled.canvas"
   ]
 }
