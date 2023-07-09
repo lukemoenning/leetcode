@@ -2,7 +2,7 @@
 2. [[Two Pointers#[Two Sum II - Input Array is Sorted (167)](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) ||Two Sum II - 04/16/2023]]
 3. [[Two Pointers#[3Sum (15)](https://leetcode.com/problems/3sum/description/) |3Sum - 05/28/2023]]
 4. [[Two Pointers#[Container With Most Water (11)](https://leetcode.com/problems/container-with-most-water/description/) |Container With Most Water - 05/30/2023]]
-5. [[Two Pointers#[Trapping Rain Water (42)](https://leetcode.com/problems/trapping-rain-water/) |Trapping Rain Water - 05/30/2023]]
+5. [[Two Pointers#[Trapping Rain Water (42)](https://leetcode.com/problems/trapping-rain-water/) |Trapping Rain Water - 07/08/2023]]
 
 
 
@@ -188,26 +188,53 @@ O(1)
 
 ---
 ## [Trapping Rain Water (42)](https://leetcode.com/problems/trapping-rain-water/)
-###### *05/30/2023*
+###### *07/08/2023*
 
 ###### Psuedo Code
 ``` 
+# for any given index, i, the water we can trap at that index is min(max on left, max on right) - height[i]
+# using arrays we can store the values of maxLeft and maxRight for every i
+# then iterate through the height array and perform the calculation
 
+# we cna optimize this using two pointers, we move the pointer that is less towards the middle
+# because we choose the pointer that is less, we just need the max from the direction of the pointer we just moved, at that will be our value for min(max on left, max on right)
 ```
 
 ###### Python Solution
 ```
-
+def trap(self, height: List[int]) -> int:
+	left = 0
+	right = len(height) - 1
+	max_left = 0
+	max_right = 0
+	water_trapped = 0
+	
+	while left<right:
+		if height[left] <= height[right]: 
+			if height[left] > max_left:
+				max_left = height[left]
+			left += 1
+			if (max_left - height[left]) > 0:
+				water_trapped += (max_left - height[left])
+		else: 
+			if height[right] > max_right:
+				max_right = height[right]
+			right -= 1
+			if (max_right - height[right]) > 0: 
+				water_trapped += (max_right - height[right])
+		
+	
+	return water_trapped
 ```
 
 ###### Runtime Complexity
 ```
-O(_)
+O(n)
 ```
 
 ###### Space Complexity
 ```
-O(_)
+O(1)
 ```
 
 ---
