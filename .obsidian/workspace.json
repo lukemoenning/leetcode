@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack.md",
+                "file": "files/templates/Question Template.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -137,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Stack.md",
+                "file": "files/questions/Random Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Stack.md",
+                "file": "files/questions/Random Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Stack.md"
+                "file": "files/questions/Random Questions.md"
               }
             }
           }
@@ -198,16 +199,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f2db8f76d6b93b68",
+  "active": "f8c46d217530e397",
   "lastOpenFiles": [
     "Table of Contents.md",
-    "files/Python Useful Functions.md",
     "files/templates/Question Template.md",
-    "Stack.md",
-    "files/templates/New File Template.md",
-    "files/questions/Two Pointers.md",
-    "files/Algorithms.md",
     "files/questions/Random Questions.md",
+    "files/templates/New File Template.md",
+    "files/Python Useful Functions.md",
+    "files/questions/Two Pointers.md",
+    "files/questions/Stack.md",
+    "files/Algorithms.md",
     "files/templates/category.md",
     "files/questions/Arrays and Hashing.md",
     "files/templates",
