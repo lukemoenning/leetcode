@@ -1,5 +1,6 @@
 1. [[Stack#[Valid Parentheses (20)](https://leetcode.com/problems/valid-parentheses/description/) |Valid Parentheses - 07/08/2023]]
-2. [[Stack#[Evaluate Reverse Polish Notation (150)](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/) |valuate Reverse Polish Notation - 07/13/2023]]
+2. [[Stack#[Evaluate Reverse Polish Notation (150)](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/) |Evaluate Reverse Polish Notation - 07/13/2023]]
+3. [[Stack#[Daily Temperatures (793)](https://leetcode.com/problems/daily-temperatures/description/) |Daily Temperatures - 07/13/2023]]
 
 
 
@@ -85,6 +86,45 @@ def evalRPN(self, tokens: List[str]) -> int:
 
 
 	return stack.pop()
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+---
+## [Daily Temperatures (793)](https://leetcode.com/problems/daily-temperatures/description/) 
+###### *07/13/2023*
+
+###### Psuedo Code
+``` 
+# iterate through temps
+# if a stack is empty, apend temp, index to stack
+# while current temp greater than top stack, pop and apend current index - top stack index to top stack index
+```
+
+###### Python Solution
+```python
+def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+	result = [0] * len(temperatures)
+	stack = []
+
+	for index, temp in enumerate(temperatures):
+		if not stack:
+			stack.append((temp, index))
+		else:
+			while stack and temp > stack[-1][0]:
+				popped_temp, popped_index = stack.pop()
+				result[popped_index] = index-popped_index
+			stack.append((temp, index))
+			
+	return result
 ```
 
 ###### Runtime Complexity
