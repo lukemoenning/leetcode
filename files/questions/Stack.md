@@ -1,4 +1,5 @@
 1. [[Stack#[Valid Parentheses (20)](https://leetcode.com/problems/valid-parentheses/description/) |Valid Parentheses - 07/08/2023]]
+2. [[Stack#[Evaluate Reverse Polish Notation (150)](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/) |valuate Reverse Polish Notation - 07/13/2023]]
 
 
 
@@ -36,6 +37,54 @@ def isValid(self, s: str) -> bool:
 				return False
 
 	return not stack
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+---
+## [Evaluate Reverse Polish Notation (150)](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/)
+###### *07/13/2023*
+
+###### Psuedo Code
+``` 
+# iterate through the list
+# if we hit a number add it to a stack
+# if we hit an operation pop two from the stack and make the computation
+```
+
+###### Python Solution
+```python
+def evalRPN(self, tokens: List[str]) -> int:
+	stack = []
+
+	for token in tokens:
+		if token not in '+-*/':
+			stack.append(int(token))
+		else:
+			second_num = stack.pop()
+			if not stack:
+				return second_num
+
+			first_num = stack.pop()
+			if token == '+':
+				stack.append(first_num+second_num)
+			elif token == '-':
+				stack.append(first_num-second_num)
+			elif token == '*':
+				stack.append(first_num*second_num)
+			else:
+				stack.append(int(first_num/second_num))
+
+
+	return stack.pop()
 ```
 
 ###### Runtime Complexity
