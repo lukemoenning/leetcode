@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Stack.md",
+                "file": "files/questions/Random Questions.md",
                 "mode": "source",
                 "source": false
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Stack.md",
+                "file": "files/questions/Random Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Stack.md",
+                "file": "files/questions/Random Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Stack.md"
+                "file": "files/questions/Random Questions.md"
               }
             }
           }
@@ -190,10 +190,10 @@
   "active": "f8c46d217530e397",
   "lastOpenFiles": [
     "files/templates/Question Template.md",
-    "files/questions/Stack.md",
-    "Table of Contents.md",
-    "files/templates/Algorithm Template.md",
     "files/questions/Random Questions.md",
+    "Table of Contents.md",
+    "files/questions/Stack.md",
+    "files/templates/Algorithm Template.md",
     "files/Python Useful Functions.md",
     "files/questions/Two Pointers.md",
     "files/templates/New File Template.md",
