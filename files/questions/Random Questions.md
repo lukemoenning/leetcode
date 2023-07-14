@@ -1,6 +1,7 @@
 1. [[Random Questions#[Sort Integers by The Number of 1 Bits (1356)](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) |Sort Integers by The Number of 1 Bits - 07/07/2023]]
 2. [[Random Questions#[House Robber (198)](https://leetcode.com/problems/house-robber/description/) |House Robber - 07/09/2023]]
-3. [[Random Questions#[Maximum Subarray (53)](https://leetcode.com/problems/maximum-subarray/description/) |Maximum Subarray- 07/13/2023]]
+3. [[Random Questions#[Maximum Subarray (53)](https://leetcode.com/problems/maximum-subarray/description/) |Maximum Subarray - 07/13/2023]]
+4. [[Random Questions#[Longest Substring Without Repeating Characters (3)](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) |Longest Substring Without Repeating Characters - 07/13/2023]]
 
 
 
@@ -97,6 +98,46 @@ O(n)
 ###### Space Complexity
 ```
 O(1)
+```
+
+---
+## [Longest Substring Without Repeating Characters (3)](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
+###### *07/13/2023*
+
+###### Psuedo Code
+``` 
+# sliding window, keep track of seen
+# iterate through the list
+# if we have not seen the letter, update max_length
+# while the s[i] is in seen, remove it and slide the back half of the window forward
+# finally, add s[i] to seen
+```
+
+###### Python Solution
+```python
+def lengthOfLongestSubstring(self, s: str) -> int:
+	max_length = 0
+	seen = set()
+	start = 0
+	for i in range(len(s)):
+		if s[i] not in seen:
+			max_length = max(max_length, i - start + 1)
+		while s[i] in seen:
+			seen.remove(s[start])
+			start += 1
+		seen.add(s[i])
+
+	return max_length
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 ---
