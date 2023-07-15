@@ -18,7 +18,7 @@
 ```
 
 ###### Python Solution
-```
+```python
 def isValid(self, s: str) -> bool:
 	stack = []
 	pairs = {

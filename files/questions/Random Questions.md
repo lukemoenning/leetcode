@@ -1,7 +1,9 @@
-1. [[Random Questions#[Sort Integers by The Number of 1 Bits (1356)](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) |Sort Integers by The Number of 1 Bits - 07/07/2023]]
-2. [[Random Questions#[House Robber (198)](https://leetcode.com/problems/house-robber/description/) |House Robber - 07/09/2023]]
-3. [[Random Questions#[Maximum Subarray (53)](https://leetcode.com/problems/maximum-subarray/description/) |Maximum Subarray - 07/13/2023]]
-4. [[Random Questions#[Longest Substring Without Repeating Characters (3)](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) |Longest Substring Without Repeating Characters - 07/13/2023]]
+- [ ] [[Random Questions#[Sort Integers by The Number of 1 Bits (1356)](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) |Sort Integers by The Number of 1 Bits - 07/07/2023]]
+- [ ] [[Random Questions#[House Robber (198)](https://leetcode.com/problems/house-robber/description/) |House Robber - 07/09/2023]]
+- [ ] [[Random Questions#[Maximum Subarray (53)](https://leetcode.com/problems/maximum-subarray/description/) |Maximum Subarray - 07/13/2023]]
+- [ ] [[Random Questions#[Longest Substring Without Repeating Characters (3)](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) |Longest Substring Without Repeating Characters - 07/13/2023]]
+ - [ ] [[Random Questions#[Number of Arithmetic Triples (2367)](https://leetcode.com/problems/number-of-arithmetic-triplets/description/) |Number of Arithmetic Triples - 07/14/2023]]
+ - [ ] [[category#[problemName (problemNumber)](problemLink) |problemName - dateSolvedMMDDYYYY]]
 
 
 
@@ -128,6 +130,40 @@ def lengthOfLongestSubstring(self, s: str) -> int:
 		seen.add(s[i])
 
 	return max_length
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+---
+## [Number of Arithmetic Triples (2367)](https://leetcode.com/problems/number-of-arithmetic-triplets/description/)
+###### *07/14/2023*
+
+###### Psuedo Code
+``` 
+# create a set of nums
+# iterate through nums
+# if the two other numbers to form a triple are in set increment count
+```
+
+###### Python Solution
+```python
+def arithmeticTriplets(self, nums: List[int], diff: int) -> int:
+	uniques = set(nums)
+	count = 0
+	for i in nums:
+		j = i + diff
+		k = j + diff
+		if j in uniques and k in uniques:
+			count += 1
+	return count
 ```
 
 ###### Runtime Complexity

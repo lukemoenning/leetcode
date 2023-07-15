@@ -21,7 +21,7 @@ ___
 ```
 
 ###### Python Solution
-```
+```python
 def isPalindrome(self, s: str) -> bool:
 	left = 0
 	right = len(s)-1
@@ -66,7 +66,7 @@ O(1)
 ```
 
 ###### Python Solution
-```
+```python
 def twoSum(self, numbers: List[int], target: int) -> List[int]:
 	left_pointer = 0 
 	right_pointer = len(numbers)-1
@@ -104,7 +104,7 @@ O(n)
 ```
 
 ###### Python Solution
-```
+```python
 def threeSum(self, nums: List[int]) -> Set[Tuple[int]]:
 	nums.sort()
 	results = set()
@@ -154,7 +154,7 @@ O(n)
 ```
 
 ###### Python Solution
-```
+```python
 def maxArea(self, height: List[int]) -> int:
 	max_water = 0
 	left = 0
@@ -201,7 +201,7 @@ O(1)
 ```
 
 ###### Python Solution
-```
+```python
 def trap(self, height: List[int]) -> int:
 	left = 0
 	right = len(height) - 1

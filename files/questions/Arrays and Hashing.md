@@ -17,28 +17,19 @@
 ###### Psuedo Code
 ``` 
 # iterate through the list
-
 	# if the element is not in a set
-	
 		# add it
-	
 	# else
-	
 		# return true
 ```
 
 ###### Python Solution
-```
+```python
 uniques = set()
-
 for num in nums:
-
 	if num in uniques:
-
 		return True
-
 	else:
-
 		uniques.add(num)
 
 return False
@@ -53,42 +44,28 @@ return False
 ###### Psuedo Code
 ```
 # check lengths match
-
 # iterate through s adding each letter to a dict with the value as the num of appearances
-
 # iterate through t decrementing values in the dict, if a value is decremented that doesnt exist return false
 ```
 
 ###### Python Solution
-```
+```python
 if len(s) != len(t):
-
 	return False
 
-
 dict = {}
-
 for letter in s:
-
 	if letter in dict:
-
 		dict[letter] = dict[letter] + 1
-
 	else:
-
 		dict[letter] = 1
 
 
 for letter in t:
-
 	if letter not in dict or dict[letter] is 0:
-
 		return False
-
 	else:
-
 		dict[letter] = dict[letter] - 1
-
 
 return True
 ```
@@ -105,31 +82,20 @@ return True
 ```
 
 ###### Java Solution
-```
+```java
 public int[] twoSum(int[] nums, int target) {
-
 	int[] indices = new int[2];
-
 	HashMap<Integer, Integer> map = new HashMap<>();
-
 	int complement;
-
 	for (int i = 0; i < nums.length; i++){
-
 		complement = target - nums[i];
-
 		if (map.containsKey(complement)){
-
 			indices[0] = i;
-
 			indices[1] = map.get(complement);
-
 			return indices;
 		}
-
 		map.put(nums[i], i);
 	}
-	
 	return indices;
 }
 ```
@@ -143,32 +109,23 @@ public int[] twoSum(int[] nums, int target) {
 ###### Psuedo Code
 ``` 
 # initialize an empty dictionary, anagrams
-
 # for each string, str, in strs
 	# initialize sorted_string to str sorted alphabetically
-	
 	# if sorted_string does not exists as a key in anagrams
 		# add it as a key
-	
 	# add str to anagrams[sorted_string]
-
 # return the values of anagrams converted to a list
 ```
 
 ###### Python Solution
-```
+```python
 def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-
 	anagrams = {}
-
 	for str in strs:
 		sorted_string = "".join(sorted(str))
-		
 		if sorted_string not in anagrams:
 			anagrams[sorted_string] = []
-
 		anagrams[sorted_string].append(str)
-
 	return list(anagrams.values())
 ```
 
@@ -181,14 +138,12 @@ def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 ###### Psuedo Code
 ``` 
 # initialize an empty dictionary, num_appearances
-
 # initialize a list of n empty sets where n is the number length of nums. the set stored at index k in the list will contain the numbers that appear k times
-
 # return the k most numbers starting from the last index of the array
 ```
 
 ###### Python Solution
-```
+```python
 # initialize the bucket sort
 bucket_sort = [set() for i in range(len(nums)+1)]
 
@@ -217,14 +172,12 @@ for i in range(len(bucket_sort)-1, 0, -1):
 ###### Psuedo Code
 ``` 
 # initialize an array of length n set to values 1 where n is the length of nums
-
 # for each index multiple it by the product of the values to its left side
-
 # for each index multiple it by the product of the values to its right side
 ```
 
 ###### Python Solution
-```
+```python
 answer = [1]*len(nums)
 
 product_from_left = 1
@@ -261,7 +214,7 @@ return answer
 ```
 
 ###### Python Solution
-```
+```python
 N = 9
 
 row_sets = [set() for i in range(N)]
@@ -306,7 +259,7 @@ return True
 ```
 
 ###### Python Solution
-```
+```python
 max_length = 8
 
 class Codec:
@@ -366,7 +319,7 @@ O(n)
 ```
 
 ###### Python Solution
-```
+```python
 nums_set = set(nums)
 longest = 0
 
