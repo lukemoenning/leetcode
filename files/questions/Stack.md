@@ -1,6 +1,7 @@
-1. [[Stack#[Valid Parentheses (20)](https://leetcode.com/problems/valid-parentheses/description/) |Valid Parentheses - 07/08/2023]]
-2. [[Stack#[Evaluate Reverse Polish Notation (150)](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/) |Evaluate Reverse Polish Notation - 07/13/2023]]
-3. [[Stack#[Daily Temperatures (793)](https://leetcode.com/problems/daily-temperatures/description/) |Daily Temperatures - 07/13/2023]]
+- [ ] [[Stack#[Valid Parentheses (20)](https://leetcode.com/problems/valid-parentheses/description/) |Valid Parentheses - 07/08/2023]]
+- [ ] [[Stack#[Evaluate Reverse Polish Notation (150)](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/) |Evaluate Reverse Polish Notation - 07/13/2023]]
+- [ ] [[Stack#[Daily Temperatures (793)](https://leetcode.com/problems/daily-temperatures/description/) |Daily Temperatures - 07/13/2023]]
+- [ ] [[Stack#[Car Fleet (853)](https://leetcode.com/problems/car-fleet/description/) |Car Fleet - 07/14/2023]]
 
 
 
@@ -125,6 +126,44 @@ def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
 			stack.append((temp, index))
 			
 	return result
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+---
+## [Car Fleet (853)](https://leetcode.com/problems/car-fleet/description/)
+###### *07/14/2023*
+
+###### Psuedo Code
+``` 
+# sort the cars by postion and speed, the first car will be a fleet so add its arrival time to a stack
+# for the rest of the cars, calculate the project arrival time, if its faster that top stack it joins the fleet in front
+# if its slower it starts its own fleet so we append it to stack
+# return the len of stack 
+```
+
+###### Python Solution
+```python
+def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
+	fleets = []
+	cars = sorted(zip(position, speed))[::-1]
+	for car in cars:
+		pos, speed = car
+		arrival_time = (target - pos) / speed # speed*time + postion = target
+		if not fleets:
+			fleets.append(arrival_time)
+		else: 
+			if arrival_time > fleets[-1]:
+				fleets.append(arrival_time)
+	return len(fleets)
 ```
 
 ###### Runtime Complexity

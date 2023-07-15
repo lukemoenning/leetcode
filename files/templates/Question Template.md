@@ -6,8 +6,8 @@
 
 ```
 
-###### __ Solution
-```__
+###### Python Solution
+```python
 
 ```
 

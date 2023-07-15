@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/templates/Question Template.md",
+                "file": "files/templates/New File Template.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Random Questions.md",
+                "file": "Sliding Window.md",
                 "mode": "source",
                 "source": false
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Random Questions.md",
+                "file": "Sliding Window.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Random Questions.md",
+                "file": "Sliding Window.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Random Questions.md"
+                "file": "Sliding Window.md"
               }
             }
           }
@@ -189,17 +189,18 @@
   },
   "active": "f8c46d217530e397",
   "lastOpenFiles": [
-    "files/templates/Question Template.md",
-    "files/questions/Random Questions.md",
     "Table of Contents.md",
+    "Sliding Window.md",
     "files/questions/Stack.md",
-    "files/templates/Algorithm Template.md",
-    "files/Python Useful Functions.md",
-    "files/questions/Two Pointers.md",
     "files/templates/New File Template.md",
+    "files/Python Useful Functions.md",
+    "files/templates/Question Template.md",
+    "files/questions/Two Pointers.md",
+    "files/questions/Arrays and Hashing.md",
+    "files/questions/Random Questions.md",
+    "files/templates/Algorithm Template.md",
     "files/Algorithms.md",
     "files/templates/category.md",
-    "files/questions/Arrays and Hashing.md",
     "files/templates",
     "files/questions",
     "files",
@@ -218,7 +219,6 @@
     "README.md",
     "Leetcode",
     "History of Popular Music/History of Popular Music.md",
-    "Faculty Candidate Talk - Algorithmic Foundations.md",
     "Untitled.canvas"
   ]
 }
