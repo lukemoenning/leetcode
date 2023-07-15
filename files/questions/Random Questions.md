@@ -3,7 +3,7 @@
 - [ ] [[Random Questions#[Maximum Subarray (53)](https://leetcode.com/problems/maximum-subarray/description/) |Maximum Subarray - 07/13/2023]]
 - [ ] [[Random Questions#[Longest Substring Without Repeating Characters (3)](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) |Longest Substring Without Repeating Characters - 07/13/2023]]
  - [ ] [[Random Questions#[Number of Arithmetic Triples (2367)](https://leetcode.com/problems/number-of-arithmetic-triplets/description/) |Number of Arithmetic Triples - 07/14/2023]]
- - [ ] [[category#[problemName (problemNumber)](problemLink) |problemName - dateSolvedMMDDYYYY]]
+ - [ ] [[Random Questions#[Lexicographically Smallest Palindrome (2697)](https://leetcode.com/problems/lexicographically-smallest-palindrome/description/) |Lexicographically Smallest Palindrome - 07/14/2023]]
 
 
 
@@ -174,6 +174,46 @@ O(n)
 ###### Space Complexity
 ```
 O(n)
+```
+
+---
+## [Lexicographically Smallest Palindrome (2697)](https://leetcode.com/problems/lexicographically-smallest-palindrome/description/)
+###### *07/14/2023*
+
+###### Psuedo Code
+``` 
+# two pointers, one at start one at end
+# if letters are different change set both to the lexi smaller one
+```
+
+###### Python Solution
+```python
+def makeSmallestPalindrome(self, s: str) -> str:
+	left = 0
+	right = len(s) - 1
+	result = [''] * len(s)
+
+	while left <= right:
+		if s[left] < s[right]:
+			result[right] = result[left] = s[left]
+		elif s[left] > s[right]:
+			result[left] = result[right] = s[right]
+		else:
+			result[left] = s[left]
+			result[right] = s[right]
+		left += 1
+		right -= 1
+	return ''.join(result)
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(1)
 ```
 
 ---
