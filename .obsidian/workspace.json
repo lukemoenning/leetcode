@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/templates/New File Template.md",
+                "file": "files/templates/Question Template.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sliding Window.md",
+                "file": "files/questions/Sliding Window.md",
                 "mode": "source",
                 "source": false
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sliding Window.md",
+                "file": "files/questions/Sliding Window.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sliding Window.md",
+                "file": "files/questions/Sliding Window.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sliding Window.md"
+                "file": "files/questions/Sliding Window.md"
               }
             }
           }
@@ -189,16 +189,16 @@
   },
   "active": "f8c46d217530e397",
   "lastOpenFiles": [
-    "Table of Contents.md",
-    "Sliding Window.md",
-    "files/questions/Stack.md",
-    "files/templates/New File Template.md",
-    "files/Python Useful Functions.md",
     "files/templates/Question Template.md",
+    "Table of Contents.md",
+    "files/templates/Algorithm Template.md",
+    "files/questions/Sliding Window.md",
+    "files/templates/New File Template.md",
+    "files/questions/Stack.md",
+    "files/Python Useful Functions.md",
     "files/questions/Two Pointers.md",
     "files/questions/Arrays and Hashing.md",
     "files/questions/Random Questions.md",
-    "files/templates/Algorithm Template.md",
     "files/Algorithms.md",
     "files/templates/category.md",
     "files/templates",
