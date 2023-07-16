@@ -1,4 +1,4 @@
-- [ ] [[category#[problemName (problemNumber)](problemLink) |problemName - dateSolvedMMDDYYYY]]
+- [ ] [[questionCategory#[questionName (questionNumber)](questionLink) |questionName - dateSolved]]
 
 
 

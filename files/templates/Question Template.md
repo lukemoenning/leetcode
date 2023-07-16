@@ -1,5 +1,5 @@
-## [Name (Number)](Table%20of%20Contents.md)
-###### *xx/xx/xxxx*
+## [questionName (questionNumber)](questionLink)
+###### *dateSolved*
 
 ###### Psuedo Code
 ``` 
