@@ -2,8 +2,8 @@
 - [ ] [[Random Questions#[House Robber (198)](https://leetcode.com/problems/house-robber/description/) |House Robber - 07/09/2023]]
 - [ ] [[Random Questions#[Maximum Subarray (53)](https://leetcode.com/problems/maximum-subarray/description/) |Maximum Subarray - 07/13/2023]]
 - [ ] [[Random Questions#[Longest Substring Without Repeating Characters (3)](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) |Longest Substring Without Repeating Characters - 07/13/2023]]
- - [ ] [[Random Questions#[Number of Arithmetic Triples (2367)](https://leetcode.com/problems/number-of-arithmetic-triplets/description/) |Number of Arithmetic Triples - 07/14/2023]]
- - [ ] [[Random Questions#[Lexicographically Smallest Palindrome (2697)](https://leetcode.com/problems/lexicographically-smallest-palindrome/description/) |Lexicographically Smallest Palindrome - 07/14/2023]]
+- [ ] [[Random Questions#[Number of Arithmetic Triples (2367)](https://leetcode.com/problems/number-of-arithmetic-triplets/description/) |Number of Arithmetic Triples - 07/14/2023]]
+- [ ] [[Random Questions#[Lexicographically Smallest Palindrome (2697)](https://leetcode.com/problems/lexicographically-smallest-palindrome/description/) |Lexicographically Smallest Palindrome - 07/14/2023]]
 
 
 

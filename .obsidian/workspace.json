@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/templates/Question Template.md",
+                "file": "files/templates/New File Template.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,14 +37,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Random Questions.md",
+                "file": "Table of Contents.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -126,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Random Questions.md",
+                "file": "files/templates/New File Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Random Questions.md",
+                "file": "files/templates/New File Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Random Questions.md"
+                "file": "files/templates/New File Template.md"
               }
             }
           }
@@ -187,18 +186,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f8c46d217530e397",
+  "active": "f2db8f76d6b93b68",
   "lastOpenFiles": [
-    "files/templates/Question Template.md",
-    "files/questions/Random Questions.md",
     "Table of Contents.md",
-    "files/templates/New File Template.md",
     "files/questions/Arrays and Hashing.md",
+    "files/templates/New File Template.md",
+    "files/templates/Question Template.md",
+    "files/Python Useful Functions.md",
+    "post",
+    "files/questions/Random Questions.md",
+    "post.py",
     "files/questions/Two Pointers.md",
     "files/questions/Sliding Window.md",
     "files/questions/Stack.md",
     "files/templates/Algorithm Template.md",
-    "files/Python Useful Functions.md",
     "files/Algorithms.md",
     "files/templates/category.md",
     "files/templates",
@@ -218,7 +219,6 @@
     "Leetcode/Contains Duplicate.md",
     "README.md",
     "Leetcode",
-    "History of Popular Music/History of Popular Music.md",
     "Untitled.canvas"
   ]
 }
