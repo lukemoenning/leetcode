@@ -2,17 +2,11 @@
 
 # gets the question info to generate the outline
 def GetQuestionInfo():
-  # questionCategory = input('What category is this question? (e.g. "Arrays and Hashing")')
-  # questionName = input('What is the name of this question? (e.g. "Two Sum")')
-  # questionNumber = input('What is the question number? (e.g. "1")')
-  # questionLink = input('What is the link to the question? (e.g. "https://leetcode.com/questions/two-sum/")')
-  # dateSolved = input('What is the date? (e.g. "06/16/2003")')
-  
-  questionCategory = 'Stack'
-  questionName = 'Test'
-  questionNumber = 56
-  questionLink = 'https://leetcode.com/problems/merge-intervals/'
-  dateSolved = '06/16/2003'
+  questionCategory = input('What category is this question? (e.g. "Arrays and Hashing")')
+  questionName = input('What is the name of this question? (e.g. "Two Sum")')
+  questionNumber = input('What is the question number? (e.g. "1")')
+  questionLink = input('What is the link to the question? (e.g. "https://leetcode.com/questions/two-sum/")')
+  dateSolved = input('What is the date? (e.g. "06/16/2003")')
   
   return {
     'questionCategory': questionCategory,
@@ -79,12 +73,6 @@ if __name__ == '__main__':
     # replace the question info in the template
     for info in question_info:
       updated_lines = [line.replace(info, str(question_info[info])) for line in updated_lines]
-    
-    # updated_lines = [line.replace('questionName', question_info["questionName"]) for line in lines]
-    # updated_lines = [line.replace('questionNumber', str(question_info["questionNumber"])) for line in updated_lines]
-    # updated_lines = [line.replace('questionLink', question_info["questionLink"]) for line in updated_lines]
-    # updated_lines = [line.replace('dateSolved', question_info["dateSolved"]) for line in updated_lines]
-    # updated_lines = [line.replace('questionCategory', question_info["questionCategory"]) for line in updated_lines]
 
     f.seek(0)
     f.writelines(updated_lines)
