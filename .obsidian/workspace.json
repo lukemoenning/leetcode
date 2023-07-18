@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/templates/New File Template.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f885cd7877040b05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "files/Python Useful Functions.md",
+                "file": "Table of Contents.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Table of Contents.md",
+                "file": "files/questions/Binary Search.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -125,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/templates/New File Template.md",
+                "file": "files/questions/Binary Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/templates/New File Template.md",
+                "file": "files/questions/Binary Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/templates/New File Template.md"
+                "file": "files/questions/Binary Search.md"
               }
             }
           }
@@ -186,21 +175,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f2db8f76d6b93b68",
+  "active": "f8c46d217530e397",
   "lastOpenFiles": [
-    "newQuestion.py",
+    "q.py",
     "Table of Contents.md",
-    "files/questions/Arrays and Hashing.md",
+    "files/questions/Stack.md",
     "files/templates/New File Template.md",
-    "files/templates/Question Template.md",
+    "files/templates/Algorithm Template.md",
     "files/Python Useful Functions.md",
+    "files/questions/Binary Search.md",
+    "newQuestion.py",
+    "files/questions/Arrays and Hashing.md",
+    "files/templates/Question Template.md",
     "post",
     "files/questions/Random Questions.md",
     "post.py",
     "files/questions/Two Pointers.md",
     "files/questions/Sliding Window.md",
-    "files/questions/Stack.md",
-    "files/templates/Algorithm Template.md",
     "files/Algorithms.md",
     "files/templates/category.md",
     "files/templates",
@@ -218,7 +209,6 @@
     "Leetcode/Two Sum.md",
     "Leetcode/Valid Anagram.md",
     "Leetcode/Contains Duplicate.md",
-    "README.md",
     "Leetcode",
     "Untitled.canvas"
   ]

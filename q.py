@@ -32,7 +32,6 @@ def GetQuestionHeader():
     question_header = f.readline()
   f.close()
   
-  print(question_header)
   return question_header
 
 # get the indices of where to insert the next question and its header
@@ -47,7 +46,7 @@ def GetIndices(file_path):
     elif line.startswith('---'):
       last_question_index = index
   
-  last_header_index += 1
+  last_header_index += 2
   last_question_index += 2
     
   return {

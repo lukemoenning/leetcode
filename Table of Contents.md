@@ -4,6 +4,7 @@
 - [[Two Pointers]]
 - [[Stack]]
 - [[Sliding Window]]
+- [[Binary Search]]
 
 
 
