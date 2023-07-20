@@ -24,7 +24,7 @@
     </tr>
     <tr>
       <td>zip(iterator 1, iterator 2, ...)</td>
-      <td>returns an iterable where corresponding elements from the inputer interables are paired together as tuples</td>
+      <td>returns an iterable where corresponding elements from the input interables are paired together as tuples</td>
       <td>O(n) where N is min length of input interables</td>
       <td>O(1)</td>
     </tr>
