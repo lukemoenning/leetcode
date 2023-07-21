@@ -70,7 +70,7 @@ def beginCommitProcess(question_info):
   commit_message = question_info['questionName'] + ' (' + question_info['questionNumber'] + ')'
   repo = git.Repo(os.getcwd())
   repo.git.add('--all')
-  repo.git.commit(commit_message)
+  repo.git.commit('-m', commit_message)
   repo.git.push()
 
      
