@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Link List.md",
+                "file": "Table of Contents.md",
                 "mode": "source",
                 "source": false
               }
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Link List.md",
+                "file": "Table of Contents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Link List.md",
+                "file": "Table of Contents.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Link List.md"
+                "file": "Table of Contents.md"
               }
             }
           }
@@ -177,19 +177,20 @@
   },
   "active": "f8c46d217530e397",
   "lastOpenFiles": [
+    "files/questions/Linked List.md",
+    "files/questions/Test Cat.md",
     "files/templates/New File Template.md",
-    "files/questions/Link List.md",
+    "files/questions/Arrays and Hashing.md",
+    "files/questions/Binary Search.md",
+    "files/questions/Stack.md",
     "Table of Contents.md",
     "files/questions/Two Pointers.md",
     "files/questions/Sliding Window.md",
     "files/questions/Random Questions.md",
-    "files/questions/Binary Search.md",
-    "files/questions/Stack.md",
     "files/Python Useful Functions.md",
     "q.py",
     "files/templates/Algorithm Template.md",
     "newQuestion.py",
-    "files/questions/Arrays and Hashing.md",
     "files/templates/Question Template.md",
     "post",
     "post.py",
@@ -209,7 +210,6 @@
     "Leetcode/Valid Anagram (242).md",
     "Leetcode/Two Sum.md",
     "Leetcode/Valid Anagram.md",
-    "Leetcode/Contains Duplicate.md",
     "Leetcode",
     "Untitled.canvas"
   ]

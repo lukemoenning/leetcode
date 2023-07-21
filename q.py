@@ -1,7 +1,11 @@
 # A script for generating an outline for notes on a leetcode question
 
+import os
+import git
+
+
 # gets the question info to generate the outline
-def GetQuestionInfo():
+def getQuestionInfo():
   questionCategory = input('What category is this question? (e.g. "Arrays and Hashing")')
   questionName = input('What is the name of this question? (e.g. "Two Sum")')
   questionNumber = input('What is the question number? (e.g. "1")')
@@ -17,8 +21,7 @@ def GetQuestionInfo():
   }
 
 # gets the question template
-def GetQuestionTemplate():
-  # question_template
+def getQuestionTemplate():
   with open('files/templates/Question Template.md', 'r') as f:
     question_template = f.read()
   f.close()
@@ -26,16 +29,22 @@ def GetQuestionTemplate():
   return question_template
 
 # gets the question header
-def GetQuestionHeader():
-  # question_header
+def getQuestionHeader():
   with open('files/templates/New File Template.md', 'r') as f:
     question_header = f.readline()
   f.close()
   
   return question_header
 
+# gets the file template
+def getFileTemplate():
+  with open('files/templates/New File Template.md', 'r') as f:
+    file_template = f.read()
+    
+  return file_template
+
 # get the indices of where to insert the next question and its header
-def GetIndices(file_path):
+def getIndices(file_path):
   with open(file_path, 'r') as f:
     lines = f.readlines()
   f.close()
@@ -46,28 +55,50 @@ def GetIndices(file_path):
     elif line.startswith('---'):
       last_question_index = index
   
-  last_header_index += 2
+  last_header_index += 1
   last_question_index += 2
     
   return {
     'last_header_index': last_header_index,
     'last_question_index': last_question_index
   }
+  
+# push the question to github
+def beginCommitProcess(question_info):
+  input('Press enter to push to github. Make sure you have filled in the template that was generated.')
+  
+  commit_message = question_info['questionName'] + ' (' + question_info['questionNumber'] + ')'
+  repo = git.Repo(os.getcwd())
+  repo.git.add('--all')
+  repo.git.commit(commit_message)
+  repo.git.push()
+
      
-    
+# driver    
 if __name__ == '__main__':
-  question_info = GetQuestionInfo()
-  question_template = GetQuestionTemplate()
-  question_header = GetQuestionHeader()
+  question_info = getQuestionInfo()
+  question_template = getQuestionTemplate()
+  question_header = getQuestionHeader()
   
   file_path = 'files/questions/' + question_info['questionCategory'] + '.md'
-  indices = GetIndices(file_path)
+  
+  # if the file doesn't exist, create it
+  new_file = False
+  if not os.path.exists(file_path):
+    new_file = True
+    file_template = getFileTemplate()
+    with open(file_path, 'w') as f:
+      f.write(file_template)
+    f.close()
+    
+  indices = getIndices(file_path)
   with open(file_path, 'r+') as f:
     updated_lines = f.readlines()
     
     # insert the question header and template
-    updated_lines.insert(indices['last_header_index'], question_header)
-    updated_lines.insert(indices['last_question_index'], question_template)
+    if not new_file:
+      updated_lines.insert(indices['last_header_index'], question_header)
+      updated_lines.insert(indices['last_question_index'], question_template)
     
     # replace the question info in the template
     for info in question_info:
@@ -76,5 +107,9 @@ if __name__ == '__main__':
     f.seek(0)
     f.writelines(updated_lines)
   f.close()
+
+  beginCommitProcess(question_info)
+  
+  
   
   

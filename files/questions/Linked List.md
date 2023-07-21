@@ -1,4 +1,4 @@
-- [ ] [[Link List#[Reorder List (143)](https://leetcode.com/problems/reorder-list/description/) |Reorder List - 07/19/2023]]
+- [ ] [[Linked List#[Reorder List (143)](https://leetcode.com/problems/reorder-list/description/)|Reorder List - 07/19/2023]]
 
 
 
@@ -66,27 +66,5 @@ O(n)
 O(1)
 ```
 
----## [Reorder List (143)](https://leetcode.com/problems/reorder-list/description/)
-###### *07/19/2023*
-
-###### Psuedo Code
-``` 
-
-```
-
-###### Python Solution
-```python
-
-```
-
-###### Runtime Complexity
-```
-O(_)
-```
-
-###### Space Complexity
-```
-O(_)
-```
 
 ---
