@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Table of Contents.md",
+                "file": "files/questions/Binary Search.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Table of Contents.md",
+                "file": "files/questions/Binary Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Table of Contents.md",
+                "file": "files/questions/Binary Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Table of Contents.md"
+                "file": "files/questions/Binary Search.md"
               }
             }
           }
@@ -175,15 +174,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f8c46d217530e397",
+  "active": "f2db8f76d6b93b68",
   "lastOpenFiles": [
+    "Table of Contents.md",
     "files/questions/Linked List.md",
     "files/questions/Test Cat.md",
     "files/templates/New File Template.md",
     "files/questions/Arrays and Hashing.md",
     "files/questions/Binary Search.md",
     "files/questions/Stack.md",
-    "Table of Contents.md",
     "files/questions/Two Pointers.md",
     "files/questions/Sliding Window.md",
     "files/questions/Random Questions.md",
