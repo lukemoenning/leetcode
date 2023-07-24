@@ -1,5 +1,8 @@
 {
   "accentColor": "",
   "cssTheme": "Obsidianite",
-  "baseFontSize": 18
+  "baseFontSize": 18,
+  "enabledCssSnippets": [
+    "checkbox-no-strikethrough"
+  ]
 }

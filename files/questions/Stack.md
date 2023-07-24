@@ -1,3 +1,6 @@
+- [ ] Done with help 
+- [x] Done on own
+
 - [ ] [[Stack#[Valid Parentheses (20)](https://leetcode.com/problems/valid-parentheses/description/) |Valid Parentheses - 07/08/2023]]
 - [ ] [[Stack#[Evaluate Reverse Polish Notation (150)](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/) |Evaluate Reverse Polish Notation - 07/13/2023]]
 - [ ] [[Stack#[Daily Temperatures (793)](https://leetcode.com/problems/daily-temperatures/description/) |Daily Temperatures - 07/13/2023]]

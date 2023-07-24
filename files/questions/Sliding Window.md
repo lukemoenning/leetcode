@@ -1,3 +1,6 @@
+- [ ] Done with help 
+- [x] Done on own
+
 - [x] [[Sliding Window#[Best Time to Buy and Sell Stock (121)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/) |Best Time to Buy and Sell Stock - 07/14/2023]]
 
 

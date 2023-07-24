@@ -1,3 +1,6 @@
+- [ ] Done with help 
+- [x] Done on own
+
 - [ ] [[Binary Search#[Binary Search (704)](https://leetcode.com/problems/binary-search/description/) |Binary Search - 07/17/2023]]
 - [ ] [[Binary Search#[Search a 2D Matrix (74)](https://leetcode.com/problems/search-a-2d-matrix/description/) |Search a 2D Matrix - 07/19/2023]]
 - [ ] [[Binary Search#[Koko Eating Bananas (875)](https://leetcode.com/problems/koko-eating-bananas/description/) |Koko Eating Bananas - 07/20/2023]]

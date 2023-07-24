@@ -1,3 +1,6 @@
+- [ ] Done with help 
+- [x] Done on own
+
 - [ ] [[Linked List#[Reorder List (143)](https://leetcode.com/problems/reorder-list/description/)|Reorder List - 07/19/2023]]
 
 

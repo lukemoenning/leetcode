@@ -1,3 +1,6 @@
+- [ ] Done with help 
+- [x] Done on own
+
 - [ ] [[Two Pointers#[Valid Palindrome (125)](https://leetcode.com/problems/valid-palindrome/description/) |Valid Palindrome - 04/09/2023]]
 - [ ] [[Two Pointers#[Two Sum II - Input Array is Sorted (167)](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) ||Two Sum II - 04/16/2023]]
 - [ ] [[Two Pointers#[3Sum (15)](https://leetcode.com/problems/3sum/description/) |3Sum - 05/28/2023]]
