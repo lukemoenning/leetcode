@@ -5,6 +5,7 @@
 - [[Stack]]
 - [[Sliding Window]]
 - [[Binary Search]]
+- [[Linked List]]
 
 
 
