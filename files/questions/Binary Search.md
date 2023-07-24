@@ -1,6 +1,7 @@
 - [ ] [[Binary Search#[Binary Search (704)](https://leetcode.com/problems/binary-search/description/) |Binary Search - 07/17/2023]]
 - [ ] [[Binary Search#[Search a 2D Matrix (74)](https://leetcode.com/problems/search-a-2d-matrix/description/) |Search a 2D Matrix - 07/19/2023]]
 - [ ] [[Binary Search#[Koko Eating Bananas (875)](https://leetcode.com/problems/koko-eating-bananas/description/) |Koko Eating Bananas - 07/20/2023]]
+- [ ] [[Binary Search#[Find Minimum in Rotated Sorted Array (153)](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/) |Find Minimum in Rotated Sorted Array - 07/23/2023]]
 
 
 ---
@@ -121,6 +122,50 @@ def minEatingSpeed(self, piles: List[int], h: int) -> int:
 ###### Runtime Complexity
 ```
 O(m*logn) where m is max(piles) and n is len(piles)
+```
+
+###### Space Complexity
+```
+O(1)
+```
+
+
+---
+## [Find Minimum in Rotated Sorted Array (153)](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
+###### *07/23/2023*
+
+###### Psuedo Code
+``` 
+# looking for the place where right < left, binary search to find that
+```
+
+###### Python Solution
+```python
+def findMin(self, nums: List[int]) -> int:
+	if len(nums) == 1:
+		return nums[0]
+
+	n = len(nums)
+	left, right = 0, n - 1
+
+	while left < right:
+		mid = (left+right) // 2
+		if mid+1 < n and nums[mid] > nums[mid + 1]:
+			return nums[mid + 1]
+		if mid-1 >= 0 and nums[mid-1] and nums[mid-1] > nums[mid]:
+			return nums[mid]
+		
+		if nums[0] < nums[mid]:
+			left = mid + 1
+		else:
+			 right = mid - 1
+
+	return nums[0]
+```
+
+###### Runtime Complexity
+```
+O(logn)
 ```
 
 ###### Space Complexity
