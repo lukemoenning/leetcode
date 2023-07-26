@@ -1,7 +1,7 @@
 - [ ] Done with help 
 - [x] Done on own
 
-- [x] [[questionCategory#[questionName (questionNumber)](questionLink) |questionName - dateSolved]]
+- [ ] [[questionCategory#[questionName (questionNumber)](questionLink) |questionName - dateSolved]]
 
 
 

@@ -31,10 +31,10 @@ def getQuestionTemplate():
 # gets the question header
 def getQuestionHeader():
   with open('files/templates/New File Template.md', 'r') as f:
-    question_header = f.readline()
+    lines = f.readlines()
   f.close()
   
-  return question_header
+  return lines[3]
 
 # gets the file template
 def getFileTemplate():
