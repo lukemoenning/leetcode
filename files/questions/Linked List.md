@@ -2,6 +2,7 @@
 - [x] Done on own
 
 - [ ] [[Linked List#[Reorder List (143)](https://leetcode.com/problems/reorder-list/description/)|Reorder List - 07/19/2023]]
+- [x] [[Linked List#[Reverse Linked List (206)](https://leetcode.com/problems/reverse-linked-list/description/) |Reverse Linked List - 07/30/2023]]
 
 
 
@@ -57,6 +58,44 @@ def zipLL(self, left: ListNode, right: ListNode) -> None:
 		right.next = temp_left
 		left = temp_left
 		right = temp_right
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(1)
+```
+
+
+---
+## [Reverse Linked List (206)](https://leetcode.com/problems/reverse-linked-list/description/)
+###### *07/30/2023*
+
+###### Psuedo Code
+``` 
+# use a current a prev tracker
+# point current to previous for each node in the list
+```
+
+###### Python Solution
+```python
+def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+	if not head:
+		return None
+
+	current = head
+	prev = None
+	while current:
+		temp = current.next
+		current.next = prev
+		prev = current
+		current = temp
+
+	return prev
 ```
 
 ###### Runtime Complexity
