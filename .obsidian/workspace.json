@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f2db8f76d6b93b68",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "files/questions/Binary Search.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "f8c46d217530e397",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -177,20 +164,20 @@
   },
   "active": "f8c46d217530e397",
   "lastOpenFiles": [
+    "Table of Contents.md",
+    "files/questions/Arrays and Hashing.md",
+    "files/questions/Binary Search.md",
+    "files/questions/Random Questions.md",
     "files/templates/Algorithm Template.md",
     "files/Python Useful Functions.md",
     "files/Algorithms.md",
     "files/templates/New File Template.md",
-    "files/questions/Binary Search.md",
     "files/questions/Sliding Window.md",
     "files/questions/Linked List.md",
     "files/questions/Stack.md",
     "files/templates/Question Template.md",
-    "files/questions/Arrays and Hashing.md",
-    "files/questions/Random Questions.md",
     "files/questions/Two Pointers.md",
     "files/templates/questionCategory.md",
-    "Table of Contents.md",
     "files/questions/Test Cat.md",
     "q.py",
     "newQuestion.py",

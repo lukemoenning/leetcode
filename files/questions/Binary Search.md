@@ -6,6 +6,7 @@
 - [ ] [[Binary Search#[Koko Eating Bananas (875)](https://leetcode.com/problems/koko-eating-bananas/description/) |Koko Eating Bananas - 07/20/2023]]
 - [ ] [[Binary Search#[Find Minimum in Rotated Sorted Array (153)](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/) |Find Minimum in Rotated Sorted Array - 07/23/2023]]
 - [ ] [[Binary Search#[Search in Rotated Sorted Array (33)](https://leetcode.com/problems/search-in-rotated-sorted-array/description/) |Search in Rotated Sorted Array - 07/25/2023]]
+- [ ] [[Binary Search#[Median of Two Sorted Arrays (4)](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) |Median of Two Sorted Arrays - 07/30/2023]]
 
 
 ---
@@ -217,6 +218,89 @@ def search(self, nums: List[int], target: int) -> int:
 ###### Runtime Complexity
 ```
 O(logn)
+```
+
+###### Space Complexity
+```
+O(1)
+```
+
+
+---
+## [Median of Two Sorted Arrays (4)](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)
+###### *07/30/2023*
+
+###### Psuedo Code
+``` 
+    # brute force: merge the two arrays and perform binary search
+    # improved runtime: four pointers, moving the single largest and single smalled toward the middle each time until you have 1 or 2 left
+
+    # optimized: we can just run a binary search on the smaller of the two lists, and assume our solution is correct
+    # this means we can calculate how many elements from the larger array would be in left and how many would be in right. total/2 - number in left in smaller array
+    # we can then check if our solution is correct if the max in left is less than the max in right for both arrays
+    # a trick to avoid out out bounds errors is to set to neg inf if we index out left and pos inf for right
+```
+
+###### Python Solution
+```python
+def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+	# ensure nums1 is lesser length
+	if len(nums1) > len(nums2): 
+		nums1, nums2 = nums2, nums1
+
+	len1 = len(nums1)
+	len2 = len(nums2)
+	total_length = len1 + len2
+	half_total = total_length // 2
+
+	l, r = 0, len1-1
+	
+	while True:
+		pivot1 = (l+r) // 2
+		# adjust for index by 0
+		pivot2 = half_total - pivot1 - 2
+
+		if pivot1 >= 0: 
+			left1 = nums1[pivot1]
+		else:
+			left1 = -math.inf
+		
+		if pivot1+1 < len1:
+			right1 = nums1[pivot1 + 1]
+		else: 
+			right1 = math.inf
+
+		if pivot2 >= 0:
+			left2 = nums2[pivot2]
+		else: 
+			left2 = -math.inf
+
+		if pivot2+1 < len2:
+			right2 = nums2[pivot2 + 1]
+		else:
+			right2 = math.inf
+
+		# if our current pivots are valid
+		if left1 <= right2 and left2 <= right1:
+			# odd total length
+			if total_length % 2 == 1:
+				return min(right1, right2)
+
+			# even total length
+			else:
+				return (max(left1, left2) + min(right1, right2)) / 2
+		
+		elif left1 > right2:
+			r = pivot1 - 1
+		else:  
+			l = pivot1 + 1
+
+	return 0
+```
+
+###### Runtime Complexity
+```
+O(log(min(n,m)))
 ```
 
 ###### Space Complexity
