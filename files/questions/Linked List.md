@@ -4,6 +4,7 @@
 - [ ] [[Linked List#[Reorder List (143)](https://leetcode.com/problems/reorder-list/description/)|Reorder List - 07/19/2023]]
 - [x] [[Linked List#[Reverse Linked List (206)](https://leetcode.com/problems/reverse-linked-list/description/) |Reverse Linked List - 07/30/2023]]
 - [ ] [[Linked List#[Merge Two Sorted Lists (21)](https://leetcode.com/problems/merge-two-sorted-lists/description/) |Merge Two Sorted Lists - 07/31/2023]]
+- [x] [[Linked List#[Linked List Cycle (141)](https://leetcode.com/problems/linked-list-cycle/description/) |Linked List Cycle - 07/31/2023]]
 
 
 
@@ -149,6 +150,46 @@ def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) ->
 ###### Runtime Complexity
 ```
 O(n+m)
+```
+
+###### Space Complexity
+```
+O(1)
+```
+
+
+---
+## [Linked List Cycle (141)](https://leetcode.com/problems/linked-list-cycle/description/)
+###### *07/31/2023*
+
+###### Psuedo Code
+``` 
+    # brute force, add each node to a set, if the current node is already in the set we have a cycle
+    # optimized space with floyd's cycle finding algorithm, fast and slow pointer
+```
+
+###### Python Solution
+```python
+def hasCycle(self, head: Optional[ListNode]) -> bool:
+	if not head:
+		return False
+
+	slow = head
+	fast = head
+
+	while fast and fast.next:
+		slow = slow.next
+		fast = fast.next.next
+
+		if slow == fast:
+			return True
+	
+	return False
+```
+
+###### Runtime Complexity
+```
+O(n)
 ```
 
 ###### Space Complexity
