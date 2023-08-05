@@ -3,6 +3,7 @@
 
 - [ ] [[Trees#[Invert Binary Tree (226)](https://leetcode.com/problems/invert-binary-tree/description/) |Invert Binary Tree - 08/04/2023]]
 - [ ] [[Trees#[Maximum Depth of Binary Tree (104)](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) |Maximum Depth of Binary Tree - 08/04/2023]]
+- [ ] [[Trees#[Diameter of Binary Tree (543)](https://leetcode.com/problems/diameter-of-binary-tree/description/) |Diameter of Binary Tree - 08/05/2023]]
 
 
 
@@ -63,6 +64,48 @@ def maxDepth(self, root: Optional[TreeNode]) -> int:
 
 	return max(left, right) + 1
 
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(height) = O(n)
+```
+
+
+---
+## [Diameter of Binary Tree (543)](https://leetcode.com/problems/diameter-of-binary-tree/description/)
+###### *08/05/2023*
+
+###### Psuedo Code
+``` 
+# dfs
+# the longest path has to be between two leaf nodes
+# which means the maxium path for a current node is the max depth of left plus max depth of right, do for every node and keep track of overall max diameter 
+```
+
+###### Python Solution
+```python
+def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+	diameter = 0
+
+	def helper(node: Optional[TreeNode]) -> int:
+		nonlocal diameter
+		if node == None:
+			return 0
+		
+		left = helper(node.left)
+		right = helper(node.right)
+		
+		diameter = max(diameter, left+right)
+		return max(left, right) + 1
+
+	helper(root)
+	return diameter
 ```
 
 ###### Runtime Complexity
