@@ -6,6 +6,7 @@
 - [[Sliding Window]]
 - [[Binary Search]]
 - [[Linked List]]
+- [[Trees]]
 
 
 

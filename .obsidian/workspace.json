@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Linked List.md",
+                "file": "files/questions/Trees.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Linked List.md",
+                "file": "files/questions/Trees.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Linked List.md",
+                "file": "files/questions/Trees.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Linked List.md"
+                "file": "files/questions/Trees.md"
               }
             }
           }
@@ -165,6 +165,8 @@
   "active": "f8c46d217530e397",
   "lastOpenFiles": [
     "Table of Contents.md",
+    "files/questions/Trees.md",
+    "files/questions/Linked List.md",
     "files/questions/Binary Search.md",
     "files/questions/Arrays and Hashing.md",
     "files/questions/Random Questions.md",
@@ -173,7 +175,6 @@
     "files/Algorithms.md",
     "files/templates/New File Template.md",
     "files/questions/Sliding Window.md",
-    "files/questions/Linked List.md",
     "files/questions/Stack.md",
     "files/templates/Question Template.md",
     "files/questions/Two Pointers.md",
@@ -196,7 +197,6 @@
     "Leetcode/Arrays and Hashing.md",
     "Leetcode/Two Sum (1).md",
     "Leetcode/Valid Anagram (242).md",
-    "Leetcode/Two Sum.md",
     "Leetcode",
     "Untitled.canvas"
   ]
