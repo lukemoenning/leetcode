@@ -4,6 +4,7 @@
 - [ ] [[Trees#[Invert Binary Tree (226)](https://leetcode.com/problems/invert-binary-tree/description/) |Invert Binary Tree - 08/04/2023]]
 - [ ] [[Trees#[Maximum Depth of Binary Tree (104)](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) |Maximum Depth of Binary Tree - 08/04/2023]]
 - [ ] [[Trees#[Diameter of Binary Tree (543)](https://leetcode.com/problems/diameter-of-binary-tree/description/) |Diameter of Binary Tree - 08/05/2023]]
+- [ ] [[Trees#[Same Tree (100)](https://leetcode.com/problems/same-tree/) |Same Tree - 08/09/2023]]
 
 
 
@@ -116,6 +117,37 @@ O(n)
 ###### Space Complexity
 ```
 O(height) = O(n)
+```
+
+
+---## [Same Tree (100)](https://leetcode.com/problems/same-tree/)
+###### *08/09/2023*
+
+###### Psuedo Code
+``` 
+# check that each corresponding node exists and has the same value
+```
+
+###### Python Solution
+```python
+def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+	if not p and not q:
+		return True  
+
+	if p and q and p.val == q.val:
+		return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)  
+	
+	return False
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 
