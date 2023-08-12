@@ -5,6 +5,7 @@
 - [ ] [[Trees#[Maximum Depth of Binary Tree (104)](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) |Maximum Depth of Binary Tree - 08/04/2023]]
 - [ ] [[Trees#[Diameter of Binary Tree (543)](https://leetcode.com/problems/diameter-of-binary-tree/description/) |Diameter of Binary Tree - 08/05/2023]]
 - [ ] [[Trees#[Same Tree (100)](https://leetcode.com/problems/same-tree/) |Same Tree - 08/09/2023]]
+- [ ] [[Trees#[Subtree of Another Tree (572)](https://leetcode.com/problems/subtree-of-another-tree/description/) |Subtree of Another Tree - 08/12/2023]]
 
 
 
@@ -120,7 +121,8 @@ O(height) = O(n)
 ```
 
 
----## [Same Tree (100)](https://leetcode.com/problems/same-tree/)
+---
+## [Same Tree (100)](https://leetcode.com/problems/same-tree/)
 ###### *08/09/2023*
 
 ###### Psuedo Code
@@ -148,6 +150,47 @@ O(n)
 ###### Space Complexity
 ```
 O(n)
+```
+
+
+---
+## [Subtree of Another Tree (572)](https://leetcode.com/problems/subtree-of-another-tree/description/)
+###### *08/12/2023*
+
+###### Psuedo Code
+``` 
+# dfs on the root, call same tree on root and subRoot
+```
+
+###### Python Solution
+```python
+def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+	if not root: 
+		return False
+	
+	if self.sameTree(root, subRoot):
+		return True
+		
+	return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
+
+def sameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+	if not p and not q: 
+		return True
+
+	if p and q and p.val == q.val:
+		return self.sameTree(p.left, q.left) and self.sameTree(p.right, q.right)
+
+	return False
+```
+
+###### Runtime Complexity
+```
+O(n*m)
+```
+
+###### Space Complexity
+```
+O(n+m)
 ```
 
 
