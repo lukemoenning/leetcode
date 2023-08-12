@@ -1,6 +1,7 @@
 
 ## Sorting Algorithms
 - [[Algorithms#Quicksort |QuickSort]]
+- [[Algorithms#Binary Search Tree |Binary Search Tree]]
 
 
 
@@ -29,7 +30,7 @@ O(1) becuase it is an in-place sort
 ```
 
 ###### Code
-```
+```python
 def partition(array, low, high):
 	pivot = array[high]
 	
@@ -50,6 +51,42 @@ def quickSort(array, low, high):
 	
 	quickSort(array, low, partition_index-1)
 	quickSort(array, partition_index + 1, high)
+```
+
+
+
+---
+## Binary Search Tree
+
+###### Algorithm Breakdown
+``` 
+Keep track of min and max a node can be, perform a dfs of the tree and make sure each node value is within its bounds
+
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+###### Code
+```python
+def helper(node, min=float('-inf'), max=float('inf')):
+	if not node:
+		return True
+		
+	if not min < node.value < max:
+		return False
+	
+	return helper(node.left, min, node.value) and helper(node.right, node.value, max)
+		
+		
+return helper(t)
 ```
 
 
