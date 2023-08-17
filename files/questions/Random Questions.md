@@ -81,6 +81,9 @@ O(1)
 ``` 
 # dp, the currentsubarray at the current location is equal to the max(existing_max+current, current)
 # iterate through list, update current and max for each value
+# OR
+# intialize max_sum and curr_sum
+# iterate through array, increment curr_sum by nums[i], if curr_sum goes negative reset to zero, if curr_sum > max_sum update max_sum
 ```
 
 ###### Python Solution
@@ -93,6 +96,21 @@ def maxSubArray(self, nums: List[int]) -> int:
 		max_sub = max(max_sub, current_sub)
 	
 	return max_sub
+
+
+
+def maxSubArray(self, nums: List[int]) -> int:
+	max_sum = float('-inf')
+	curr_sum = 0
+
+	for i in range(len(nums)):
+		curr_sum += nums[i]
+		if curr_sum > max_sum:
+			max_sum = curr_sum
+		if curr_sum < 0:
+			curr_sum = 0
+
+	return max_sum
 ```
 
 ###### Runtime Complexity
