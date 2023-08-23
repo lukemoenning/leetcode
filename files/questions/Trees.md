@@ -6,6 +6,7 @@
 - [ ] [[Trees#[Diameter of Binary Tree (543)](https://leetcode.com/problems/diameter-of-binary-tree/description/) |Diameter of Binary Tree - 08/05/2023]]
 - [ ] [[Trees#[Same Tree (100)](https://leetcode.com/problems/same-tree/) |Same Tree - 08/09/2023]]
 - [ ] [[Trees#[Subtree of Another Tree (572)](https://leetcode.com/problems/subtree-of-another-tree/description/) |Subtree of Another Tree - 08/12/2023]]
+- [ ] [[Trees#[Lowest Common Ancestor of a Binary Search Tree (235)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/) |Lowest Common Ancestor of a Binary Search Tree - 08/23/2023]]
 
 
 
@@ -191,6 +192,46 @@ O(n*m)
 ###### Space Complexity
 ```
 O(n+m)
+```
+
+
+---
+## [Lowest Common Ancestor of a Binary Search Tree (235)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
+###### *08/23/2023*
+
+###### Psuedo Code
+``` 
+# we know that since it is a BST, we can do binary search for val
+# if both p and q are on in the same subtree, search that subtree
+# if p and q are in separate subtrees, one left and one right, return curr
+```
+
+###### Python Solution
+```python
+def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+	if root is None: 
+		return None
+
+	curr = root
+	while curr:
+		if p.val < curr.val and q.val < curr.val:
+			curr = curr.left
+		elif p.val > curr.val and q.val > curr.val:
+			curr = curr.right
+		else:
+			return curr
+	
+	return None
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(1)
 ```
 
 
