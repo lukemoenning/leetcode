@@ -8,6 +8,7 @@
 - [ ] [[Trees#[Subtree of Another Tree (572)](https://leetcode.com/problems/subtree-of-another-tree/description/) |Subtree of Another Tree - 08/12/2023]]
 - [ ] [[Trees#[Lowest Common Ancestor of a Binary Search Tree (235)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/) |Lowest Common Ancestor of a Binary Search Tree - 08/23/2023]]
 - [ ] [[Trees#[Binary Tree Level Order Traversal (102)](https://leetcode.com/problems/binary-tree-level-order-traversal/description/) |Binary Tree Level Order Traversal - 08/26/2023]]
+- [ ] [[Trees#[Binary Tree Right Side View (199)](https://leetcode.com/problems/binary-tree-right-side-view/description/) |Binary Tree Right Side View - 08/26/2023]]
 
 
 
@@ -279,6 +280,51 @@ O(n)
 ###### Space Complexity
 ```
 O(n)
+```
+
+
+---
+## [Binary Tree Right Side View (199)](https://leetcode.com/problems/binary-tree-right-side-view/description/)
+###### *08/26/2023*
+
+###### Psuedo Code
+``` 
+# for every level of a bfs search, append the right most value
+```
+
+###### Python Solution
+```python
+def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+	if not root:
+		return None
+
+	q = deque()
+	q.append(root)
+	res = []
+
+	while q:
+		l = len(q)
+		for i in range(l):
+			node = q.popleft()
+			if node and i == l-1:
+				res.append(node.val)
+			if node.left:
+				q.append(node.left)
+			if node.right:
+				q.append(node.right)
+		
+	
+	return res
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(1)
 ```
 
 
