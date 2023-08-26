@@ -7,6 +7,7 @@
 - [ ] [[Trees#[Same Tree (100)](https://leetcode.com/problems/same-tree/) |Same Tree - 08/09/2023]]
 - [ ] [[Trees#[Subtree of Another Tree (572)](https://leetcode.com/problems/subtree-of-another-tree/description/) |Subtree of Another Tree - 08/12/2023]]
 - [ ] [[Trees#[Lowest Common Ancestor of a Binary Search Tree (235)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/) |Lowest Common Ancestor of a Binary Search Tree - 08/23/2023]]
+- [ ] [[Trees#[Binary Tree Level Order Traversal (102)](https://leetcode.com/problems/binary-tree-level-order-traversal/description/) |Binary Tree Level Order Traversal - 08/26/2023]]
 
 
 
@@ -232,6 +233,52 @@ O(n)
 ###### Space Complexity
 ```
 O(1)
+```
+
+
+---
+## [Binary Tree Level Order Traversal (102)](https://leetcode.com/problems/binary-tree-level-order-traversal/description/)
+###### *08/26/2023*
+
+###### Psuedo Code
+``` 
+# bfs, only pop one level at a time
+```
+
+###### Python Solution
+```python
+def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+	if not root:
+		return None
+
+	q = deque()
+	res = []
+	q.append(root)
+
+	while q:
+		l = len(q)
+		curr_list = []
+		for i in range(l):
+			node = q.popleft()
+			if node:
+				curr_list.append(node.val)
+				if node.left:
+					q.append(node.left)
+				if node.right:
+					q.append(node.right)
+		res.append(curr_list)
+
+	return res
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 
