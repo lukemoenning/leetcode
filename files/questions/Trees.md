@@ -9,6 +9,7 @@
 - [ ] [[Trees#[Lowest Common Ancestor of a Binary Search Tree (235)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/) |Lowest Common Ancestor of a Binary Search Tree - 08/23/2023]]
 - [ ] [[Trees#[Binary Tree Level Order Traversal (102)](https://leetcode.com/problems/binary-tree-level-order-traversal/description/) |Binary Tree Level Order Traversal - 08/26/2023]]
 - [ ] [[Trees#[Binary Tree Right Side View (199)](https://leetcode.com/problems/binary-tree-right-side-view/description/) |Binary Tree Right Side View - 08/26/2023]]
+- [ ] [[Trees#[Count Good Nodes in Binary Tree (1448)](https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/) |Count Good Nodes in Binary Tree - 08/26/2023]]
 
 
 
@@ -325,6 +326,51 @@ O(n)
 ###### Space Complexity
 ```
 O(1)
+```
+
+
+---
+## [Count Good Nodes in Binary Tree (1448)](https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/)
+###### *08/26/2023*
+
+###### Psuedo Code
+``` 
+# dfs, for each node, keep track of a max_seen
+# if the current is greater than the max, increment good
+```
+
+###### Python Solution
+```python
+def goodNodes(self, root: TreeNode) -> int:
+	if not root:
+		return None
+
+	good_count = 0
+	dfs = []
+	dfs.append((root, float('-inf')))
+
+	while dfs:
+		node, max_seen = dfs.pop()
+		if node.val >= max_seen:
+			good_count += 1
+			max_seen = node.val
+		if node.left:
+			dfs.append((node.left, max_seen))
+		if node.right:
+			dfs.append((node.right, max_seen))
+		
+
+	return good_count
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 
