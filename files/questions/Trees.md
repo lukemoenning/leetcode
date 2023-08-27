@@ -10,6 +10,7 @@
 - [ ] [[Trees#[Binary Tree Level Order Traversal (102)](https://leetcode.com/problems/binary-tree-level-order-traversal/description/) |Binary Tree Level Order Traversal - 08/26/2023]]
 - [ ] [[Trees#[Binary Tree Right Side View (199)](https://leetcode.com/problems/binary-tree-right-side-view/description/) |Binary Tree Right Side View - 08/26/2023]]
 - [ ] [[Trees#[Count Good Nodes in Binary Tree (1448)](https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/) |Count Good Nodes in Binary Tree - 08/26/2023]]
+- [ ] [[Trees#[Validate Binary Search Tree (98)](https://leetcode.com/problems/validate-binary-search-tree/description/) |Validate Binary Search Tree - 08/27/2023]]
 
 
 
@@ -371,6 +372,66 @@ O(n)
 ###### Space Complexity
 ```
 O(n)
+```
+
+
+---
+## [Validate Binary Search Tree (98)](https://leetcode.com/problems/validate-binary-search-tree/description/)
+###### *08/27/2023*
+
+###### Psuedo Code
+``` 
+# conditions: min_val < node < max_val
+# dfs, ensure each node satisfies conditions
+```
+
+###### Python Solution
+```python
+def isValidBST(self, root: Optional[TreeNode]) -> bool:
+	return self.dfs(root, float('-inf'), float('inf'))
+
+def dfs(self, node: Optional[TreeNode], min_val: float, max_val: float) -> bool:
+	if not node:
+		return True
+		
+	if node.val <= min_val or node.val >= max_val:
+		return False
+
+	return self.dfs(node.left, min_val, node.val) and self.dfs(node.right, node.val, max_val)
+
+
+########################################################################
+
+
+def isValidBST(self, root: Optional[TreeNode]) -> bool:
+	if not root: 
+		return True
+	
+	stack = []
+	stack.append((root, float('-inf'), float('inf')))
+
+	while stack:
+		curr, min_val, max_val = stack.pop()
+
+		if curr.val <= min_val or curr.val >= max_val:
+			return False
+
+		if curr.left:
+			stack.append((curr.left, min_val, curr.val))
+		if curr.right:
+			stack.append((curr.right, curr.val, max_val))
+	
+	return True
+```
+
+###### Runtime Complexity
+```
+O(_)
+```
+
+###### Space Complexity
+```
+O(_)
 ```
 
 
