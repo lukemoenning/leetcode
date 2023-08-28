@@ -7,6 +7,7 @@
 - [[Binary Search]]
 - [[Linked List]]
 - [[Trees]]
+- [[Backtracking]]
 
 
 

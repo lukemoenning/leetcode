@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Trees.md",
+                "file": "files/questions/Backtracking.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Trees.md",
+                "file": "files/questions/Backtracking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Trees.md",
+                "file": "files/questions/Backtracking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Trees.md"
+                "file": "files/questions/Backtracking.md"
               }
             }
           }
@@ -164,18 +164,19 @@
   },
   "active": "f8c46d217530e397",
   "lastOpenFiles": [
+    "Table of Contents.md",
+    "files/questions/Backtracking.md",
+    "files/questions/Trees.md",
     "files/questions/Random Questions.md",
     "files/Algorithms.md",
     "files/templates/New File Template.md",
     "files/templates/Algorithm Template.md",
-    "files/questions/Trees.md",
     "files/questions/Arrays and Hashing.md",
     "files/questions/Binary Search.md",
     "files/questions/Linked List.md",
     "files/questions/Two Pointers.md",
     "files/questions/Sliding Window.md",
     "files/questions/Stack.md",
-    "Table of Contents.md",
     "files/Python Useful Functions.md",
     "files/templates/Question Template.md",
     "files/templates/questionCategory.md",
@@ -196,7 +197,6 @@
     "Leetcode/Contains Duplicate (217).md",
     "Leetcode/Arrays and Hashing.md",
     "Leetcode/Two Sum (1).md",
-    "Leetcode/Valid Anagram (242).md",
     "Leetcode",
     "Untitled.canvas"
   ]
