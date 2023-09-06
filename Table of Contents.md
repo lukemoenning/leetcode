@@ -8,6 +8,7 @@
 - [[Linked List]]
 - [[Trees]]
 - [[Backtracking]]
+- [[Dynamic Programming]]
 
 
 
