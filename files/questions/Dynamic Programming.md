@@ -3,6 +3,7 @@
 
 - [ ] [[Dynamic Programming#[Climbing Stairs (70)](https://leetcode.com/problems/climbing-stairs/description/) |Climbing Stairs - 09/06/2023]]
 
+- [ ] [[Dynamic Programming#[Mine Cost Climbing Stairs (746)](https://leetcode.com/problems/min-cost-climbing-stairs/description/) |Mine Cost Climbing Stairs - 09/06/2023]]
 
 
 ---
@@ -51,6 +52,40 @@ O(n)
 ###### Space Complexity
 ```
 O(1)
+```
+
+
+---
+## [Mine Cost Climbing Stairs (746)](https://leetcode.com/problems/min-cost-climbing-stairs/description/)
+###### *09/06/2023*
+
+###### Psuedo Code
+``` 
+# build up to the solution
+# the price for i is min(dp[i-1]+cost[i], dp[i-2]+cost[2])
+# need to build to one beyond the list since we want to reach the top
+```
+
+###### Python Solution
+```python
+def minCostClimbingStairs(self, cost: List[int]) -> int:
+	N = len(cost)
+	dp = [0] * (N+1)
+
+	for i in range(2,N+1):
+		dp[i] = min(dp[i-1]+cost[i-1], dp[i-2]+cost[i-2])
+
+	return dp[N]
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 
