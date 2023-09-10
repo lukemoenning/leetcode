@@ -4,7 +4,7 @@
 - [ ] [[Dynamic Programming#[Climbing Stairs (70)](https://leetcode.com/problems/climbing-stairs/description/) |Climbing Stairs - 09/06/2023]]
 - [ ] [[Dynamic Programming#[Mine Cost Climbing Stairs (746)](https://leetcode.com/problems/min-cost-climbing-stairs/description/) |Mine Cost Climbing Stairs - 09/06/2023]]
 - [ ] [[Dynamic Programming#[House Robber (198)](https://leetcode.com/problems/house-robber/description/) |House Robber - 09/07/2023]]
-
+- [ ] [[Dynamic Programming#[House Robber II (213)](https://leetcode.com/problems/house-robber-ii/) |House Robber II - 09/09/2023]]
 ---
 ## [Climbing Stairs (70)](https://leetcode.com/problems/climbing-stairs/description/)
 ###### *09/06/2023*
@@ -145,6 +145,54 @@ def rob(self, nums: List[int]) -> int:
 
 	return max(minus1, minus2)
 
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(1)
+```
+
+
+---
+## [House Robber II (213)](https://leetcode.com/problems/house-robber-ii/)
+###### *09/09/2023*
+
+###### Psuedo Code
+``` 
+# house robber but first and last are connected
+# we can disconnect the circle by ignoring one of the houses, take the max of two house robbers ignoring different adjacent houses for each
+```
+
+###### Python Solution
+```python
+def rob(self, nums: List[int]) -> int:
+	N = len(nums)
+
+	if N == 1:
+		return nums[0]
+
+	first_run = self.houseRobber(nums[:N-1])
+	second_run = self.houseRobber(nums[1:N])
+
+	return max(first_run, second_run)
+	
+
+def houseRobber(self, nums: List[int]) -> int:
+	N = len(nums)
+	minus2 = 0
+	minus1 = 0
+
+	for i, num in enumerate(nums):
+		curr = max(minus2 + num, minus1)
+		minus2 = minus1
+		minus1 = curr
+	
+	return max(minus1, minus2)
 ```
 
 ###### Runtime Complexity
