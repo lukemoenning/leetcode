@@ -55,8 +55,8 @@ def getIndices(file_path):
     elif line.startswith('---'):
       last_question_index = index
   
-  last_header_index += 2
-  last_question_index += 2
+  last_header_index += 1
+  last_question_index += 3
     
   return {
     'last_header_index': last_header_index,

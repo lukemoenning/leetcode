@@ -5,6 +5,7 @@
 - [ ] [[Dynamic Programming#[Mine Cost Climbing Stairs (746)](https://leetcode.com/problems/min-cost-climbing-stairs/description/) |Mine Cost Climbing Stairs - 09/06/2023]]
 - [ ] [[Dynamic Programming#[House Robber (198)](https://leetcode.com/problems/house-robber/description/) |House Robber - 09/07/2023]]
 - [ ] [[Dynamic Programming#[House Robber II (213)](https://leetcode.com/problems/house-robber-ii/) |House Robber II - 09/09/2023]]
+- [ ] [[Dynamic Programming#[Longest Palindromic Substring (5)](https://leetcode.com/problems/longest-palindromic-substring/description/) |Longest Palindromic Substring - 09/11/2023]]
 ---
 ## [Climbing Stairs (70)](https://leetcode.com/problems/climbing-stairs/description/)
 ###### *09/06/2023*
@@ -203,6 +204,56 @@ O(n)
 ###### Space Complexity
 ```
 O(1)
+```
+
+
+---
+## [Longest Palindromic Substring (5)](https://leetcode.com/problems/longest-palindromic-substring/description/)
+###### *09/11/2023*
+
+###### Psuedo Code
+``` 
+# brute force: find every substring with two forloops, call isPalindrome and update accordingly
+# optimized: dp, for every letter we add the longest palidrome is either the existing one or a new palindrome created with the new letter, for each character need to check all odd and even substrings in this way
+# optimal: manacher's algorithm. 
+```
+
+###### Python Solution
+```python
+def longestPalindrome(self, s):
+	N = len(s)
+	max_substr = []
+
+	for i in range(N):
+		odd = self.longest(s, i, i, [])
+		odd_len = len(odd)
+		even = self.longest(s, i, i+1, [])
+		even_len = len(even)
+
+		if odd_len > even_len and odd_len > len(max_substr):
+			max_substr = odd
+		if even_len > odd_len and even_len > len(max_substr):
+			max_substr = even
+
+	return max_substr
+
+def longest(self, s, start, end, curr):
+	if start < 0 or end > len(s)-1 or s[start] != s[end]:
+		return curr
+
+	curr = s[start:end+1]
+
+	return self.longest(s, start-1, end+1, curr)
+```
+
+###### Runtime Complexity
+```
+O(n^2)
+```
+
+###### Space Complexity
+```
+O(n) could be improved by doing iterate expansions
 ```
 
 
