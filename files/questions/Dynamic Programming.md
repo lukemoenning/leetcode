@@ -6,6 +6,7 @@
 - [ ] [[Dynamic Programming#[House Robber (198)](https://leetcode.com/problems/house-robber/description/) |House Robber - 09/07/2023]]
 - [ ] [[Dynamic Programming#[House Robber II (213)](https://leetcode.com/problems/house-robber-ii/) |House Robber II - 09/09/2023]]
 - [ ] [[Dynamic Programming#[Longest Palindromic Substring (5)](https://leetcode.com/problems/longest-palindromic-substring/description/) |Longest Palindromic Substring - 09/11/2023]]
+- [ ] [[Dynamic Programming#[Palindromic Substrings (647)](https://leetcode.com/problems/palindromic-substrings/description/) |Palindromic Substrings - 09/12/2023]]
 ---
 ## [Climbing Stairs (70)](https://leetcode.com/problems/climbing-stairs/description/)
 ###### *09/06/2023*
@@ -254,6 +255,55 @@ O(n^2)
 ###### Space Complexity
 ```
 O(n) could be improved by doing iterate expansions
+```
+
+
+---
+## [Palindromic Substrings (647)](https://leetcode.com/problems/palindromic-substrings/description/)
+###### *09/12/2023*
+
+###### Psuedo Code
+``` 
+# brute force: calculate all substrings, call isPalidrome on each O(N^3)
+# optimize: iterate through s, for each letter, expand outwards to check odd and even palidromes
+```
+
+###### Python Solution
+```python
+def countSubstrings(self, s: str) -> int:
+	if not s:
+		return 0
+
+	N = len(s)
+	count = 0
+
+	# recursive helper
+	def expand(start, end):
+		nonlocal count
+
+		# base case
+		if (start < 0) or (start >= N) or (end >= N) or (s[start] != s[end]):
+			return count
+
+		# recursive steps
+		count += 1
+		return expand(start-1, end+1)
+
+	for i in range(N):
+		expand(i, i) # odds
+		expand(i, i+1) # evens
+
+	return count
+```
+
+###### Runtime Complexity
+```
+O(n^2)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 
