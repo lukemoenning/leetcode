@@ -1,11 +1,11 @@
 - [ ] Done with help 
-- [ ] Done on own
+- [x] Done on own
 
 - [x] [[Arrays and Hashing#[Contains Duplicate (217)](https://leetcode.com/problems/contains-duplicate/) |Contains Duplicate - 03/11/2023]]
 - [x] [[Arrays and Hashing#[Valid Anagram (242)](https://leetcode.com/problems/valid-anagram/)|Valid Anagram - 03/11/2023]]
 - [x] [[Arrays and Hashing#[Two Sum (1)](https://leetcode.com/problems/two-sum/) |Two Sum - 09/09/2022]]
 - [x] [[Arrays and Hashing#[Group Anagrams (49)](https://leetcode.com/problems/group-anagrams/description/) |Group Anagram - 03/12/2023]]
-- [ ] [[Arrays and Hashing#[Top K Frequent Elements (347)](https://leetcode.com/problems/top-k-frequent-elements/description/) |Top K Frequent Elements - 03/15/2023]]
+- [x] [[Arrays and Hashing#[Top K Frequent Elements (347)](https://leetcode.com/problems/top-k-frequent-elements/description/) |Top K Frequent Elements - 03/15/2023]]
 - [ ] [[Arrays and Hashing#[Product of Array Except Self (238)]( https://leetcode.com/problems/product-of-array-except-self/description/) |Product of Array Except Self - 03/15/2023]]
 - [ ] [[Arrays and Hashing#[Valid Sudoku (36)](https://leetcode.com/problems/valid-sudoku/description/) |Valid Sudoku - 03/24/2023]]
 - [ ] [[Arrays and Hashing#[Encode and Decode Strings (271)](https://leetcode.com/problems/encode-and-decode-strings/description/) |Encode and Decode Strings - 04/02/2023]]
@@ -164,6 +164,29 @@ for i in range(len(bucket_sort)-1, 0, -1):
 		k_most_frequent.append(number)
 		if len(k_most_frequent) == k:
 			return k_most_frequent
+			
+			
+############
+def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+	res = []
+	tupes = []
+
+	# build counts
+	counts = Counter(nums)
+
+	# build tuples
+	for key in counts.keys():
+		tupes.append((key, counts[key]))
+
+	# sort tuples
+	tupes.sort(key = lambda x: x[1], reverse=True)
+
+	# build res
+	for i in range(k):
+		res.append(tupes[i][0])
+
+	# return res
+	return res
 ```
 
 
