@@ -238,3 +238,62 @@ O(1)
 ```
 
 ---
+## [Load Balancing](questionLink)
+###### *10/18/2023*
+
+###### Psuedo Code
+``` 
+
+```
+
+###### Python Solution
+```python
+import heapq
+
+def func(n, arrival, burstTime):
+    m = len(arrival)
+    result = [-1] * m
+    busy_servers = []
+    available_servers = list(range(n))
+    
+    requests = [(a, b, idx) for idx, (a, b) in enumerate(zip(arrival, burstTime))]
+    requests.sort(key=lambda x: x[0])
+
+    for arrival_time, burst_time, original_index in requests:
+        finish_time = arrival_time + burst_time
+
+        while busy_servers and busy_servers[0][0] <= arrival_time:
+            finished_time, finished_server = heapq.heappop(busy_servers)
+            heapq.heappush(available_servers, finished_server)
+
+        if len(available_servers) == 0:
+            continue
+
+        next_available_server = heapq.heappop(available_servers)
+
+        result[original_index] = next_available_server + 1
+        heapq.heappush(busy_servers, (finish_time, next_available_server))
+
+    return result
+
+# Test
+n = 4
+arrival = [3,5,1,6,8]
+burstTime = [9,2,10,4,5]
+
+print(func(n, arrival, burstTime))
+
+```
+
+###### Runtime Complexity
+```
+O(_)
+```
+
+###### Space Complexity
+```
+O(_)
+```
+
+
+---
