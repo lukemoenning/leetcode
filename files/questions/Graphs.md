@@ -2,6 +2,7 @@
 - [x] Done on own
 
 - [ ] [[Graphs#[Number of Islands (200)](https://leetcode.com/problems/number-of-islands/description/) |Number of Islands - 11/01/2023]]
+- [ ] [[Graphs#[Max Area of Island (695)](https://leetcode.com/problems/max-area-of-island/description/) |Max Area of Island - 11/01/2023]]
 
 
 
@@ -72,12 +73,86 @@ def numIslands(self, grid: List[List[str]]) -> int:
 
 ###### Runtime Complexity
 ```
-O(n * m)
+O(n*m)
 ```
 
 ###### Space Complexity
 ```
-O(n * m)
+O(n*m)
+```
+
+
+--- 
+## [Max Area of Island (695)](https://leetcode.com/problems/max-area-of-island/description/)
+###### *11/01/2023*
+
+###### Psuedo Code
+``` 
+# iterate each cell, checking for new islands, 
+# if we find a new island, discover the entire thing with dfs/bfs, updating max_found accordingly
+```
+
+###### Python Solution
+```python
+def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+	if not grid:
+		return 0
+
+	N = len(grid)
+	M = len(grid[0])
+	vis = set()
+	largest_island = 0
+
+	def getValidMoves(x, y):
+		valid_moves = []
+		potential_moves = [(0,1), (0,-1), (1,0), (-1,0)]
+
+		for dx, dy in potential_moves:
+			if 0 <= (x + dx) < N and 0 <= (y + dy) < M:
+				valid_moves.append((x+dx, y+dy))
+
+		return valid_moves
+
+	# assuming input here is valid and unvisited
+	def dfs(x, y):
+		curr_size = 0
+		stack = [(x, y)]
+
+		while stack:
+			curr_x, curr_y = stack.pop()
+			if (curr_x, curr_y) in vis:
+				continue
+
+			vis.add((curr_x, curr_y))
+			curr_size += 1
+			moves = getValidMoves(curr_x, curr_y)
+			for move in moves:
+				new_x, new_y = move
+				if grid[new_x][new_y] == 1:
+					stack.append((new_x, new_y))
+
+		return curr_size
+	
+	for x in range(N):
+		for y in range(M):
+			# check for a new island
+			if grid[x][y] == 1 and (x, y) not in vis:
+				# find size of island
+				size = dfs(x, y)
+				largest_island = max(largest_island, size)
+	
+	
+	return largest_island
+```
+
+###### Runtime Complexity
+```
+O(n*m)
+```
+
+###### Space Complexity
+```
+O(n*m)
 ```
 
 
