@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Random Questions.md",
-                "mode": "preview",
+                "file": "files/Algorithms.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Graphs.md",
+                "file": "files/templates/Algorithm Template.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Graphs.md",
+                "file": "files/Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Graphs.md",
+                "file": "files/Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Graphs.md"
+                "file": "files/Algorithms.md"
               }
             }
           }
@@ -175,14 +174,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "58ca94265309cd42",
+  "active": "f8c46d217530e397",
   "lastOpenFiles": [
-    "files/questions/Dynamic Programming.md",
-    "files/questions/Graphs.md",
-    "files/questions/Random Questions.md",
+    "files/questions/Arrays and Hashing.md",
     "files/Algorithms.md",
     "files/Python Useful Functions.md",
-    "files/questions/Arrays and Hashing.md",
+    "files/templates/Algorithm Template.md",
+    "files/questions/Random Questions.md",
+    "files/questions/Graphs.md",
+    "files/questions/Dynamic Programming.md",
     "files/questions/Stack.md",
     "files/questions/Sliding Window.md",
     "files/questions/Two Pointers.md",
@@ -192,7 +192,6 @@
     "files/questions/Trees.md",
     "files/templates/Question Template.md",
     "files/templates/New File Template.md",
-    "files/templates/Algorithm Template.md",
     "Table of Contents.md",
     "files/templates/questionCategory.md",
     "files/questions/Test Cat.md",

@@ -92,3 +92,93 @@ return helper(t)
 
 
 ---
+## Depth-First Search
+
+###### Algorithm Breakdown
+``` 
+# visit nodes if a FIFO manner
+# for that node, visit all of its children
+```
+
+###### Runtime Complexity
+```
+Tree Search:
+O(n) or O(b^d), n = number of nodes, b = branching factor, d = depth
+
+Graph Search:
+O(V+E), V = number of vertices, E = number of edges
+```
+
+###### Space Complexity
+```
+Tree Search:
+O(bd), b = branching factor, d = depth
+
+Graph Search:
+O(V+E), V = number of vertices, E = number of edges
+```
+
+###### Code
+```python
+visited = set()
+
+def recursiveDFS(node):
+
+
+def iterativeDFS(node):
+```
+
+
+
+---
+## Breadth-First Search
+
+###### Algorithm Breakdown
+``` 
+# visit nodes if a LIFO manner
+# for that node, visit all of its children
+```
+
+###### Runtime Complexity
+```
+Tree Search:
+O(n) or O(b^d), n = number of nodes, b = branching factor, d = depth
+
+Graph Search:
+O(V+E), V = number of vertices, E = number of edges
+```
+
+###### Space Complexity
+```
+Tree Search:
+O(b^d), b = branching factor, d = depth
+
+Graph Search:
+O(V+E), V = number of vertices, E = number of edges
+```
+
+###### Code
+```python
+from collections import deque
+
+def bfs(node):
+	if not node:
+		return 
+		
+	visited = set()
+	q = deque(node)
+
+	while queue:
+		curr = q.popleft()
+		if curr in visited:
+			continue
+
+		visited.add(curr)
+		for child in curr.neighbors:
+			if child not in visited:
+				q.append(child)
+```
+
+
+
+---
