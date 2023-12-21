@@ -10,6 +10,7 @@
 - [ ] [[Arrays and Hashing#[Valid Sudoku (36)](https://leetcode.com/problems/valid-sudoku/description/) |Valid Sudoku - 03/24/2023]]
 - [ ] [[Arrays and Hashing#[Encode and Decode Strings (271)](https://leetcode.com/problems/encode-and-decode-strings/description/) |Encode and Decode Strings - 04/02/2023]]
 - [ ] [[Arrays and Hashing#[Longest Consecutive Sequence (128)](https://leetcode.com/problems/longest-consecutive-sequence/description/) |Longest Consecutive Sequence - 04/09/2023]]
+- [ ] [[Arrays and Hashing#[Widest Vertical Area Between Two Points Containing No Points (1637)]() |Widest Vertical Area Between Two Points Containing No Points - 12/20/2023]]
 
 
 
@@ -375,5 +376,41 @@ O(n)
 ```
 O(n)
 ```
+
+---
+## [Widest Vertical Area Between Two Points Containing No Points (1637)]()
+###### *12/20/2023*
+
+###### Psuedo Code
+``` 
+# sort the list and check adjacent pairs
+```
+
+###### Python Solution
+```python
+def maxWidthOfVerticalArea(self, points: List[List[int]]) -> int:
+	N = len(points)
+	sorted_points = sorted(points, key=lambda x: x[0])
+	widest_area = 0
+
+	for i in range(1, N):
+		x1, y1 = sorted_points[i]
+		x0, y0 = sorted_points[i-1]
+		current_area = x1 - x0
+		widest_area = max(widest_area, current_area)
+
+	return widest_area
+```
+
+###### Runtime Complexity
+```
+O(nlogn)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
 
 ---
