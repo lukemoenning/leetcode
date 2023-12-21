@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Arrays and Hashing.md",
+                "file": "files/questions/Heap.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Arrays and Hashing.md",
+                "file": "files/questions/Heap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Arrays and Hashing.md",
+                "file": "files/questions/Heap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Arrays and Hashing.md"
+                "file": "files/questions/Heap.md"
               }
             }
           }
@@ -164,6 +164,8 @@
   },
   "active": "f8c46d217530e397",
   "lastOpenFiles": [
+    "files/questions/Arrays and Hashing.md",
+    "files/questions/Heap.md",
     "files/questions/Random Questions.md",
     "files/questions/Dynamic Programming.md",
     "files/questions/Graphs.md",
@@ -172,7 +174,6 @@
     "files/questions/Binary Search.md",
     "files/questions/Backtracking.md",
     "files/questions/Two Pointers.md",
-    "files/questions/Arrays and Hashing.md",
     "files/questions/Stack.md",
     "files/questions/Sliding Window.md",
     "files/questions/Trees.md",
@@ -196,7 +197,6 @@
     "Two Sum (1).md",
     "Valid Anagram (242).md",
     "Leetcode/Leetcode.md",
-    "Leetcode/Contains Duplicate (217).md",
     "Leetcode",
     "Untitled.canvas"
   ]
