@@ -11,6 +11,7 @@
 - [ ] [[Arrays and Hashing#[Encode and Decode Strings (271)](https://leetcode.com/problems/encode-and-decode-strings/description/) |Encode and Decode Strings - 04/02/2023]]
 - [ ] [[Arrays and Hashing#[Longest Consecutive Sequence (128)](https://leetcode.com/problems/longest-consecutive-sequence/description/) |Longest Consecutive Sequence - 04/09/2023]]
 - [ ] [[Arrays and Hashing#[Widest Vertical Area Between Two Points Containing No Points (1637)]() |Widest Vertical Area Between Two Points Containing No Points - 12/20/2023]]
+- [x] [[Arrays and Hashing#[Maximum Score After Splitting a String (1422)](https://leetcode.com/problems/maximum-score-after-splitting-a-string/description/?envType=daily-question&envId=2023-12-22) |Maximum Score After Splitting a String - 12/22/2023]]
 
 
 
@@ -378,7 +379,7 @@ O(n)
 ```
 
 ---
-## [Widest Vertical Area Between Two Points Containing No Points (1637)]()
+## [Widest Vertical Area Between Two Points Containing No Points (1637)](https://leetcode.com/problems/widest-vertical-area-between-two-points-containing-no-points)
 ###### *12/20/2023*
 
 ###### Psuedo Code
@@ -405,6 +406,48 @@ def maxWidthOfVerticalArea(self, points: List[List[int]]) -> int:
 ###### Runtime Complexity
 ```
 O(nlogn)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Maximum Score After Splitting a String (1422)](https://leetcode.com/problems/maximum-score-after-splitting-a-string/description/?envType=daily-question&envId=2023-12-22)
+###### *12/22/2023*
+
+###### Psuedo Code
+``` 
+# offset one pass by one to account for how we split the string
+# two pass, one from left to count zeros and one from right to count ones
+```
+
+###### Python Solution
+```python
+def maxScore(self, s: str) -> int:
+	N = len(s)
+	scores = [0] * N
+	zeros_from_left = 0
+	ones_from_right = 0
+
+	for i in range(N):
+		if s[i] == '0':
+			zeros_from_left += 1
+		scores[i] += zeros_from_left
+		
+	for i in range(N-1, -1, -1):
+		scores[i] += ones_from_right
+		if s[i] == '1':
+			ones_from_right += 1
+
+	return max(scores[:N-1])
+```
+
+###### Runtime Complexity
+```
+O(n)
 ```
 
 ###### Space Complexity
