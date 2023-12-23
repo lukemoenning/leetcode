@@ -12,6 +12,7 @@
 - [ ] [[Arrays and Hashing#[Longest Consecutive Sequence (128)](https://leetcode.com/problems/longest-consecutive-sequence/description/) |Longest Consecutive Sequence - 04/09/2023]]
 - [ ] [[Arrays and Hashing#[Widest Vertical Area Between Two Points Containing No Points (1637)]() |Widest Vertical Area Between Two Points Containing No Points - 12/20/2023]]
 - [x] [[Arrays and Hashing#[Maximum Score After Splitting a String (1422)](https://leetcode.com/problems/maximum-score-after-splitting-a-string/description/?envType=daily-question&envId=2023-12-22) |Maximum Score After Splitting a String - 12/22/2023]]
+- [ ] [[Arrays and Hashing#[Path Crossing (1296)](https://leetcode.com/problems/path-crossing/description/) |Path Crossing - 12/22/2023]]
 
 
 
@@ -443,6 +444,51 @@ def maxScore(self, s: str) -> int:
 			ones_from_right += 1
 
 	return max(scores[:N-1])
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Path Crossing (1296)](https://leetcode.com/problems/path-crossing/description/)
+###### *12/22/2023*
+
+###### Psuedo Code
+``` 
+# maintain a visited set, for each new action, a, ensure we have not visited where it will take us, a'
+```
+
+###### Python Solution
+```python
+def isPathCrossing(self, path: str) -> bool:
+	visited = set()
+	x, y = 0, 0
+	visited.add((x,y))
+	transitions = {
+		'N': [0,1],
+		'S': [0,-1],
+		'E': [1,0],
+		'W': [-1,0]
+	}
+
+	for a in path:
+		dx, dy = transitions[a]
+		x += dx
+		y += dy
+		a_prime = (x,y)
+		if a_prime in visited:
+			return True
+		visited.add(a_prime)
+
+	return False
 ```
 
 ###### Runtime Complexity
