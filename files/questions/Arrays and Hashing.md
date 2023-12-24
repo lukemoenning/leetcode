@@ -10,9 +10,10 @@
 - [ ] [[Arrays and Hashing#[Valid Sudoku (36)](https://leetcode.com/problems/valid-sudoku/description/) |Valid Sudoku - 03/24/2023]]
 - [ ] [[Arrays and Hashing#[Encode and Decode Strings (271)](https://leetcode.com/problems/encode-and-decode-strings/description/) |Encode and Decode Strings - 04/02/2023]]
 - [ ] [[Arrays and Hashing#[Longest Consecutive Sequence (128)](https://leetcode.com/problems/longest-consecutive-sequence/description/) |Longest Consecutive Sequence - 04/09/2023]]
-- [ ] [[Arrays and Hashing#[Widest Vertical Area Between Two Points Containing No Points (1637)]() |Widest Vertical Area Between Two Points Containing No Points - 12/20/2023]]
+- [x] [[Arrays and Hashing#[Widest Vertical Area Between Two Points Containing No Points (1637)]() |Widest Vertical Area Between Two Points Containing No Points - 12/20/2023]]
 - [x] [[Arrays and Hashing#[Maximum Score After Splitting a String (1422)](https://leetcode.com/problems/maximum-score-after-splitting-a-string/description/?envType=daily-question&envId=2023-12-22) |Maximum Score After Splitting a String - 12/22/2023]]
-- [ ] [[Arrays and Hashing#[Path Crossing (1296)](https://leetcode.com/problems/path-crossing/description/) |Path Crossing - 12/22/2023]]
+- [x] [[Arrays and Hashing#[Path Crossing (1296)](https://leetcode.com/problems/path-crossing/description/) |Path Crossing - 12/22/2023]]
+- [ ] [[Arrays and Hashing#[Minimum Changes To Make Alternating Binary String (1758)](https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/) |Minimum Changes To Make Alternating Binary String - 12/24/2023]]
 
 
 
@@ -489,6 +490,88 @@ def isPathCrossing(self, path: str) -> bool:
 		visited.add(a_prime)
 
 	return False
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Minimum Changes To Make Alternating Binary String (1758)](https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/)
+###### *12/24/2023*
+
+###### Psuedo Code
+``` 
+# brute force: O(n^2) for each char, set it as a center point, count how many other characters we would have to change to make this center point valid, return the count of the minimum char
+
+# optimized: we know there are only two potential outcomes after alternating, starting with 0 or starting with 1, two counters and one pass to find the two potential then return the smaller
+```
+
+###### Python Solution
+```python
+def minOperations(self, s: str) -> int:
+	N = len(s)
+	minimum = float('inf')
+
+	def count_changes(i, center, min_count):
+		count = 0
+
+		# check left
+		l_prior = center
+		for j in range(i-1, -1, -1):
+			if s[j] == l_prior:
+				count += 1
+				if count >= min_count:
+					return min_count
+			if l_prior == '1':
+				l_prior = '0'
+			else:
+				l_prior = '1'
+	
+		# check right
+		r_prior = center
+		for k in range(i+1, N):
+			if s[k] == r_prior:
+				count += 1
+				if count >= min_count:
+					return min_count
+			if r_prior == '1':
+				r_prior = '0'
+			else:
+				r_prior = '1'
+
+		return count
+
+		
+	for index, char in enumerate(s):
+		curr_count = count_changes(index, char, minimum)
+		minimum = min(minimum, curr_count)
+
+	return minimum
+
+
+
+
+def minOperations(self, s: str) -> int:
+	N = len(s)
+	start_0 = 0 # if we start with 0, every even index should be 0
+	start_1 = 0 # if we start with 1, every even index should be 1
+
+	for i in range(N):
+		if (i%2 == 0 and s[i] != '0') or (i%2 == 1 and s[i] != '1'):
+			start_0 += 1
+
+		if (i%2 == 0 and s[i] != '1') or (i%2 == 1 and s[i] != '0'):
+			start_1 += 1
+
+	return min(start_0, start_1)
 ```
 
 ###### Runtime Complexity
