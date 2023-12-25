@@ -7,6 +7,7 @@
 - [ ] [[Dynamic Programming#[House Robber II (213)](https://leetcode.com/problems/house-robber-ii/) |House Robber II - 09/09/2023]]
 - [ ] [[Dynamic Programming#[Longest Palindromic Substring (5)](https://leetcode.com/problems/longest-palindromic-substring/description/) |Longest Palindromic Substring - 09/11/2023]]
 - [ ] [[Dynamic Programming#[Palindromic Substrings (647)](https://leetcode.com/problems/palindromic-substrings/description/) |Palindromic Substrings - 09/12/2023]]
+- [ ] [[Dynamic Programming#[Decode Ways (91)](https://leetcode.com/problems/decode-ways/description) |Decode Ways - 12/25/2023]]
 ---
 ## [Climbing Stairs (70)](https://leetcode.com/problems/climbing-stairs/description/)
 ###### *09/06/2023*
@@ -299,6 +300,54 @@ def countSubstrings(self, s: str) -> int:
 ###### Runtime Complexity
 ```
 O(n^2)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Decode Ways (91)](https://leetcode.com/problems/decode-ways/description)
+###### *12/25/2023*
+
+###### Psuedo Code
+``` 
+# brute force: break up into all possible ways to group into 1s or 2s and count valid
+
+# dp build up to the solution
+```
+
+###### Python Solution
+```python
+def numDecodings(self, s: str) -> int:
+	N = len(s)
+	dp = [1] * N
+
+	if N == 0 or s[0] == '0':
+		return 0
+
+	for i in range(1, N):
+		curr = 0
+
+		# if valid to take as 1 digit
+		if s[i] != '0':
+			curr += dp[i-1]
+		
+		# if valid to take as 2 digit
+		two_digit = int(s[i-1:i+1])
+		if 10 <= two_digit <= 26:
+			curr += dp[i-2]
+
+		dp[i] = curr
+
+	return dp[N-1]
+```
+
+###### Runtime Complexity
+```
+O(n)
 ```
 
 ###### Space Complexity
