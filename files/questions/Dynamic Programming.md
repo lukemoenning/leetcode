@@ -8,6 +8,7 @@
 - [ ] [[Dynamic Programming#[Longest Palindromic Substring (5)](https://leetcode.com/problems/longest-palindromic-substring/description/) |Longest Palindromic Substring - 09/11/2023]]
 - [ ] [[Dynamic Programming#[Palindromic Substrings (647)](https://leetcode.com/problems/palindromic-substrings/description/) |Palindromic Substrings - 09/12/2023]]
 - [ ] [[Dynamic Programming#[Decode Ways (91)](https://leetcode.com/problems/decode-ways/description) |Decode Ways - 12/25/2023]]
+- [ ] [[Dynamic Programming#[Number of Dice Rolls With Target Sum (1155)](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/description/) |Number of Dice Rolls With Target Sum - 12/26/2023]]
 ---
 ## [Climbing Stairs (70)](https://leetcode.com/problems/climbing-stairs/description/)
 ###### *09/06/2023*
@@ -353,6 +354,62 @@ O(n)
 ###### Space Complexity
 ```
 O(n)
+```
+
+
+---
+## [Number of Dice Rolls With Target Sum (1155)](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/description/)
+###### *12/26/2023*
+
+###### Psuedo Code
+``` 
+# brute force: roll every combination, count the ones that add to target
+# optimized: recur + memo
+# 1 -> num of ways for 1,6,6
+# 2 -> num of ways for 1,6,5
+# 3 -> num of ways for 1,6,4
+# ...
+# base case: once n = 1, there is 1 way iff 1 <= target <= k
+```
+
+###### Python Solution
+```python
+def numRollsToTarget(self, n: int, k: int, target: int) -> int:
+	if target > k*n or target < n:
+		return 0
+
+	memo = {}
+
+	def recur(n, target):
+		curr_ways = 0
+		key = (n, target)
+
+		# base case
+		if n == 1:
+			return 1 if 1 <= target <= k else 0
+
+		# memo
+		if key in memo:
+			return memo[key]
+
+		# recursive step
+		for i in range(1, k+1): 
+			curr_ways += recur(n-1, target-i)
+
+		memo[key] = curr_ways 
+		return memo[key]
+
+	return recur(n, target) % (10**9 + 7)
+```
+
+###### Runtime Complexity
+```
+O(n * k * target)
+```
+
+###### Space Complexity
+```
+O(n * target)
 ```
 
 
