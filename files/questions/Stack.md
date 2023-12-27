@@ -1,10 +1,11 @@
 - [ ] Done with help 
 - [x] Done on own
 
-- [ ] [[Stack#[Valid Parentheses (20)](https://leetcode.com/problems/valid-parentheses/description/) |Valid Parentheses - 07/08/2023]]
+- [x] [[Stack#[Valid Parentheses (20)](https://leetcode.com/problems/valid-parentheses/description/) |Valid Parentheses - 07/08/2023]]
 - [ ] [[Stack#[Evaluate Reverse Polish Notation (150)](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/) |Evaluate Reverse Polish Notation - 07/13/2023]]
 - [ ] [[Stack#[Daily Temperatures (793)](https://leetcode.com/problems/daily-temperatures/description/) |Daily Temperatures - 07/13/2023]]
 - [ ] [[Stack#[Car Fleet (853)](https://leetcode.com/problems/car-fleet/description/) |Car Fleet - 07/14/2023]]
+- [x] [[Stack#[Minimum Time to Make Rope Colorful (1578)](https://leetcode.com/problems/minimum-time-to-make-rope-colorful/) |Minimum Time to Make Rope Colorful - 12/26/2023]]
 
 
 
@@ -178,5 +179,58 @@ O(n)
 ```
 O(n)
 ```
+
+---
+## [Minimum Time to Make Rope Colorful (1578)](https://leetcode.com/problems/minimum-time-to-make-rope-colorful/)
+###### *12/26/2023*
+
+###### Psuedo Code
+``` 
+# stack, if we ever add duplicates pop one and add min of the two to a total
+```
+
+###### Python Solution
+```python
+def minCost(self, colors: str, neededTime: List[int]) -> int:
+	min_cost = 0
+	stack = []
+	
+	for i, char in enumerate(colors):
+		cost = neededTime[i]
+
+		if not stack:
+			stack.append((char, cost))
+			continue
+		
+		prev_char, prev_cost = stack[-1]
+		
+		# if we have a duplicate
+		if char == prev_char:
+
+			# remove the cheaper one
+			if prev_cost < cost:
+				min_cost += prev_cost
+				stack.pop()
+				stack.append((char, cost))
+			else:
+				min_cost += cost
+		
+		# if no duplicate, just append curr
+		else:
+			stack.append((char, cost))
+			
+	return min_cost
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
 
 ---
