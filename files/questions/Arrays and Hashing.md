@@ -14,6 +14,7 @@
 - [x] [[Arrays and Hashing#[Maximum Score After Splitting a String (1422)](https://leetcode.com/problems/maximum-score-after-splitting-a-string/description/?envType=daily-question&envId=2023-12-22) |Maximum Score After Splitting a String - 12/22/2023]]
 - [x] [[Arrays and Hashing#[Path Crossing (1296)](https://leetcode.com/problems/path-crossing/description/) |Path Crossing - 12/22/2023]]
 - [ ] [[Arrays and Hashing#[Minimum Changes To Make Alternating Binary String (1758)](https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/) |Minimum Changes To Make Alternating Binary String - 12/24/2023]]
+- [x] [[Arrays and Hashing#[Redistribute Characters to Make All Strings Equal (1897)](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal/) |Redistribute Characters to Make All Strings Equal - 12/30/2023]]
 
 
 
@@ -582,6 +583,40 @@ O(n)
 ###### Space Complexity
 ```
 O(n)
+```
+
+
+---
+## [Redistribute Characters to Make All Strings Equal (1897)](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal/)
+###### *12/30/2023*
+
+###### Psuedo Code
+``` 
+# we just need a multiple of N of every char
+```
+
+###### Python Solution
+```python
+def makeEqual(self, words: List[str]) -> bool:
+	N = len(words)
+	long_s = ''.join(words)
+	counts = Counter(long_s)
+
+	for key in counts:
+		if counts[key] % N != 0:
+			return False
+
+	return True
+```
+
+###### Runtime Complexity
+```
+O(n*k), n = len(words), k = max([len(w) for w in words])
+```
+
+###### Space Complexity
+```
+O(1), since only 26 potential keys
 ```
 
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Stack.md",
+                "file": "files/questions/Arrays and Hashing.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Stack.md",
+                "file": "files/questions/Arrays and Hashing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Stack.md",
+                "file": "files/questions/Arrays and Hashing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Stack.md"
+                "file": "files/questions/Arrays and Hashing.md"
               }
             }
           }
@@ -164,6 +164,7 @@
   },
   "active": "f8c46d217530e397",
   "lastOpenFiles": [
+    "files/questions/Stack.md",
     "files/questions/Dynamic Programming.md",
     "files/questions/Arrays and Hashing.md",
     "files/questions/().md",
@@ -174,7 +175,6 @@
     "files/Algorithms.md",
     "files/templates/Algorithm Template.md",
     "files/questions/Trees.md",
-    "files/questions/Stack.md",
     "files/questions/Heap.md",
     "files/questions/Graphs.md",
     "files/templates/New File Template.md",
