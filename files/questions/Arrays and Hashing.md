@@ -15,6 +15,7 @@
 - [x] [[Arrays and Hashing#[Path Crossing (1296)](https://leetcode.com/problems/path-crossing/description/) |Path Crossing - 12/22/2023]]
 - [ ] [[Arrays and Hashing#[Minimum Changes To Make Alternating Binary String (1758)](https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/) |Minimum Changes To Make Alternating Binary String - 12/24/2023]]
 - [x] [[Arrays and Hashing#[Redistribute Characters to Make All Strings Equal (1897)](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal/) |Redistribute Characters to Make All Strings Equal - 12/30/2023]]
+- [x] [[Arrays and Hashing#[Largest Substring Between Two Equal Characters (1624)](https://leetcode.com/problems/largest-substring-between-two-equal-characters) |Largest Substring Between Two Equal Characters - 12/31/2023]]
 
 
 
@@ -617,6 +618,49 @@ O(n*k), n = len(words), k = max([len(w) for w in words])
 ###### Space Complexity
 ```
 O(1), since only 26 potential keys
+```
+
+
+---
+## [Largest Substring Between Two Equal Characters (1624)](https://leetcode.com/problems/largest-substring-between-two-equal-characters)
+###### *12/31/2023*
+
+###### Psuedo Code
+``` 
+# looking for the largets diff in indicies between two same chars
+# brute force: two loops, check every char
+# optiimized: two pass, first to record indicies, second through our data structure to find max dif
+```
+
+###### Python Solution
+```python
+def maxLengthBetweenEqualCharacters(self, s: str) -> int:
+	# char: [i_1, i_2]
+	mp = {}
+	max_dif = -1
+
+	for index, char in enumerate(s):
+		if char not in mp:
+			mp[char] = [index]
+		else:
+			mp[char].append(index)
+
+	for key in mp:
+		high = mp[key][-1]
+		low = mp[key][0]
+		max_dif = max(max_dif, high-low-1)
+
+	return max_dif 
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(1)
 ```
 
 
