@@ -16,6 +16,7 @@
 - [ ] [[Arrays and Hashing#[Minimum Changes To Make Alternating Binary String (1758)](https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/) |Minimum Changes To Make Alternating Binary String - 12/24/2023]]
 - [x] [[Arrays and Hashing#[Redistribute Characters to Make All Strings Equal (1897)](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal/) |Redistribute Characters to Make All Strings Equal - 12/30/2023]]
 - [x] [[Arrays and Hashing#[Largest Substring Between Two Equal Characters (1624)](https://leetcode.com/problems/largest-substring-between-two-equal-characters) |Largest Substring Between Two Equal Characters - 12/31/2023]]
+- [x] [[Arrays and Hashing#[Assign Cookies (455)](https://leetcode.com/problems/assign-cookies/) |Assign Cookies - 01/01/2024]]
 
 
 
@@ -661,6 +662,46 @@ O(n)
 ###### Space Complexity
 ```
 O(1)
+```
+
+
+---
+## [Assign Cookies (455)](https://leetcode.com/problems/assign-cookies/)
+###### *01/01/2024*
+
+###### Psuedo Code
+``` 
+# sort both, only assign cookies that make children content
+```
+
+###### Python Solution
+```python
+def findContentChildren(self, g: List[int], s: List[int]) -> int:
+	if not s:
+		return 0
+
+	N, M = len(g), len(s)
+	child_sorted, cookie_sorted = sorted(g), sorted(s)
+	child_index, cookie_index = 0, 0
+	content_count = 0
+
+	while child_index < N and cookie_index < M:
+		if child_sorted[child_index] <= cookie_sorted[cookie_index]:
+			content_count += 1
+			child_index += 1
+		cookie_index += 1
+
+	return content_count
+```
+
+###### Runtime Complexity
+```
+O(nlogn + mlogm)
+```
+
+###### Space Complexity
+```
+O(n+m)
 ```
 
 
