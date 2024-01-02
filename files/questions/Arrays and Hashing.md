@@ -17,6 +17,7 @@
 - [x] [[Arrays and Hashing#[Redistribute Characters to Make All Strings Equal (1897)](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal/) |Redistribute Characters to Make All Strings Equal - 12/30/2023]]
 - [x] [[Arrays and Hashing#[Largest Substring Between Two Equal Characters (1624)](https://leetcode.com/problems/largest-substring-between-two-equal-characters) |Largest Substring Between Two Equal Characters - 12/31/2023]]
 - [x] [[Arrays and Hashing#[Assign Cookies (455)](https://leetcode.com/problems/assign-cookies/) |Assign Cookies - 01/01/2024]]
+- [x] [[Arrays and Hashing#[Convert an Array Into a 2D Array With Conditions (2610)](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/) |Convert an Array Into a 2D Array With Conditions - 01/02/2023]]
 
 
 
@@ -702,6 +703,49 @@ O(nlogn + mlogm)
 ###### Space Complexity
 ```
 O(n+m)
+```
+
+
+---
+## [Convert an Array Into a 2D Array With Conditions (2610)](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/)
+###### *01/02/2023*
+
+###### Psuedo Code
+``` 
+# use a counter to build separate arrays then join them
+```
+
+###### Python Solution
+```python
+def findMatrix(self, nums: List[int]) -> List[List[int]]:
+	if not nums:
+		return []
+
+	counts = Counter(nums)
+	res = []
+	distinct_left = len(counts)
+
+	while distinct_left > 0:
+		curr = []
+		for key in counts:
+			if counts[key] > 0:
+				curr.append(key)
+				counts[key] -= 1
+				if counts[key] == 0:
+					distinct_left -= 1
+		res.append(curr)
+	
+	return res
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 
