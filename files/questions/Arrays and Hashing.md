@@ -18,6 +18,7 @@
 - [x] [[Arrays and Hashing#[Largest Substring Between Two Equal Characters (1624)](https://leetcode.com/problems/largest-substring-between-two-equal-characters) |Largest Substring Between Two Equal Characters - 12/31/2023]]
 - [x] [[Arrays and Hashing#[Assign Cookies (455)](https://leetcode.com/problems/assign-cookies/) |Assign Cookies - 01/01/2024]]
 - [x] [[Arrays and Hashing#[Convert an Array Into a 2D Array With Conditions (2610)](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/) |Convert an Array Into a 2D Array With Conditions - 01/02/2023]]
+- [x] [[Arrays and Hashing#[Number of Laser Beams in a Bank (2125)](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) |Number of Laser Beams in a Bank - 01/03/2024]]
 
 
 
@@ -746,6 +747,43 @@ O(n)
 ###### Space Complexity
 ```
 O(n)
+```
+
+
+---
+## [Number of Laser Beams in a Bank (2125)](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/)
+###### *01/03/2024*
+
+###### Psuedo Code
+``` 
+# multiply the most recently seen row with the current
+```
+
+###### Python Solution
+```python
+def numberOfBeams(self, bank: List[str]) -> int:
+	if not bank: 
+		return 0
+
+	count = 0
+	prev = 0
+	for row in bank:
+		curr_count = row.count('1')
+		if curr_count > 0:
+			count += prev * curr_count
+			prev = curr_count
+
+	return count
+```
+
+###### Runtime Complexity
+```
+O(n*k), k is the longest str
+```
+
+###### Space Complexity
+```
+O(1)
 ```
 
 
