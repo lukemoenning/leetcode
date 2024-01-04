@@ -19,6 +19,7 @@
 - [x] [[Arrays and Hashing#[Assign Cookies (455)](https://leetcode.com/problems/assign-cookies/) |Assign Cookies - 01/01/2024]]
 - [x] [[Arrays and Hashing#[Convert an Array Into a 2D Array With Conditions (2610)](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/) |Convert an Array Into a 2D Array With Conditions - 01/02/2023]]
 - [x] [[Arrays and Hashing#[Number of Laser Beams in a Bank (2125)](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) |Number of Laser Beams in a Bank - 01/03/2024]]
+- [x] [[Arrays and Hashing#[Minimum Number of Operations to Make Array Empty (2870)](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty/) |Minimum Number of Operations to Make Array Empty - 01/04/2024]]
 
 
 
@@ -784,6 +785,61 @@ O(n*k), k is the longest str
 ###### Space Complexity
 ```
 O(1)
+```
+
+
+---
+## [Minimum Number of Operations to Make Array Empty (2870)](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty/)
+###### *01/04/2024*
+
+###### Psuedo Code
+``` 
+# count occurences, then use an equation to calculate total
+# if there is 1 occurence, return -1
+# if there are 2 or 3, add 1
+# 4 or more,  
+# 4 -> 2,2
+# 5 -> 3,2
+# 6 -> 3,3
+# 7 -> 3,2,2 
+# 8 -> 3,3,2
+# 9 -> 3,3,3
+# 10 -> 3,3,2,2
+# 11 -> 3,3,3,2
+# 12 -> 3,3,3,3
+# 13 -> 3,3,3,2,2
+```
+
+###### Python Solution
+```python
+def minOperations(self, nums: List[int]) -> int:
+	if not nums: 
+		return -1
+
+	counts = Counter(nums)
+	total = 0
+	
+	for num in counts:
+		curr = counts[num]
+		if curr == 1:
+			return -1
+		elif curr == 2 or curr == 3:
+			total += 1
+		else:
+			weight = ((curr - 4) // 3) + 2
+			total += weight
+
+	return total
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 
