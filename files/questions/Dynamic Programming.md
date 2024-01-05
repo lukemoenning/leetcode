@@ -9,6 +9,7 @@
 - [ ] [[Dynamic Programming#[Palindromic Substrings (647)](https://leetcode.com/problems/palindromic-substrings/description/) |Palindromic Substrings - 09/12/2023]]
 - [ ] [[Dynamic Programming#[Decode Ways (91)](https://leetcode.com/problems/decode-ways/description) |Decode Ways - 12/25/2023]]
 - [ ] [[Dynamic Programming#[Number of Dice Rolls With Target Sum (1155)](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/description/) |Number of Dice Rolls With Target Sum - 12/26/2023]]
+- [ ] [[Dynamic Programming#[Longest Increasing Subsequence (300)](https://leetcode.com/problems/longest-increasing-subsequence/description/) |Longest Increasing Subsequence - 01/05/2024]]
 ---
 ## [Climbing Stairs (70)](https://leetcode.com/problems/climbing-stairs/description/)
 ###### *09/06/2023*
@@ -410,6 +411,49 @@ O(n * k * target)
 ###### Space Complexity
 ```
 O(n * target)
+```
+
+
+---
+## [Longest Increasing Subsequence (300)](https://leetcode.com/problems/longest-increasing-subsequence/description/)
+###### *01/05/2024*
+
+###### Psuedo Code
+``` 
+# brute force: compute all subsequences
+    # slightly better: either take or dont take an element, memo to prevent duplicate computations
+        # base case: out of elements to add, no longer increasing
+    # iterative: for each new element added, it can either
+        # if it can be added len += 1
+        # if it cannot be, replace the rightmost element such that it will still be in sorted order
+```
+
+###### Python Solution
+```python
+def lengthOfLIS(self, nums: List[int]) -> int:
+	if not nums:
+		return 0
+
+	longest_sub = [nums[0]]
+
+	for num in nums[1:]:
+		if num > longest_sub[-1]:
+			longest_sub.append(num)
+		else:   
+			replace_index = bisect.bisect_left(longest_sub, num)
+			longest_sub[replace_index] = num
+			
+	return len(longest_sub)
+```
+
+###### Runtime Complexity
+```
+O(nlogn)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 
