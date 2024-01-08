@@ -11,6 +11,7 @@
 - [ ] [[Trees#[Binary Tree Right Side View (199)](https://leetcode.com/problems/binary-tree-right-side-view/description/) |Binary Tree Right Side View - 08/26/2023]]
 - [ ] [[Trees#[Count Good Nodes in Binary Tree (1448)](https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/) |Count Good Nodes in Binary Tree - 08/26/2023]]
 - [ ] [[Trees#[Validate Binary Search Tree (98)](https://leetcode.com/problems/validate-binary-search-tree/description/) |Validate Binary Search Tree - 08/27/2023]]
+- [x] [[Trees#[Range Sum of BST (938)](https://leetcode.com/problems/range-sum-of-bst/) |Range Sum of BST - 01/07/2024]]
 
 
 
@@ -432,6 +433,47 @@ O(_)
 ###### Space Complexity
 ```
 O(_)
+```
+
+
+---
+## [Range Sum of BST (938)](https://leetcode.com/problems/range-sum-of-bst/)
+###### *01/07/2024*
+
+###### Psuedo Code
+``` 
+# dfs + check for range
+```
+
+###### Python Solution
+```python
+def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
+	if not root:
+		return 0
+
+	stack = [root]
+	range_sum = 0
+
+	while stack:
+		curr = stack.pop()
+		if low <= curr.val <= high:
+			range_sum += curr.val
+		if curr.left:
+			stack.append(curr.left) 
+		if curr.right:
+			stack.append(curr.right) 
+
+	return range_sum
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
 ```
 
 

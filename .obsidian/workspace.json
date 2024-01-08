@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f8c46d217530e397",
+            "id": "27ba089603438ae4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Dynamic Programming.md",
+                "file": "files/questions/Trees.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Dynamic Programming.md",
+                "file": "files/questions/Trees.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Dynamic Programming.md",
+                "file": "files/questions/Trees.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Dynamic Programming.md"
+                "file": "files/questions/Trees.md"
               }
             }
           }
@@ -162,27 +162,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f8c46d217530e397",
+  "active": "27ba089603438ae4",
   "lastOpenFiles": [
-    "files/questions/Arrays and Hashing.md",
-    "files/questions/Stack.md",
     "files/questions/Dynamic Programming.md",
+    "files/questions/Random Questions.md",
+    "files/questions/Backtracking.md",
+    "files/questions/Binary Search.md",
+    "files/questions/Graphs.md",
+    "files/templates/Algorithm Template.md",
+    "files/templates/Question Template.md",
+    "files/questions/Two Pointers.md",
+    "files/questions/Arrays and Hashing.md",
+    "files/Python Useful Functions.md",
+    "files/Algorithms.md",
+    "files/questions/Stack.md",
     "files/questions/().md",
     "files/questions/Linked List.md",
-    "files/questions/Random Questions.md",
     "files/questions/Sliding Window.md",
-    "files/questions/Two Pointers.md",
-    "files/Algorithms.md",
-    "files/templates/Algorithm Template.md",
     "files/questions/Trees.md",
     "files/questions/Heap.md",
-    "files/questions/Graphs.md",
     "files/templates/New File Template.md",
-    "files/questions/Binary Search.md",
-    "files/questions/Backtracking.md",
     "Table of Contents.md",
-    "files/Python Useful Functions.md",
-    "files/templates/Question Template.md",
     "files/templates/questionCategory.md",
     "files/questions/Test Cat.md",
     "q.py",
