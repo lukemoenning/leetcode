@@ -20,6 +20,7 @@
 - [x] [[Arrays and Hashing#[Convert an Array Into a 2D Array With Conditions (2610)](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/) |Convert an Array Into a 2D Array With Conditions - 01/02/2023]]
 - [x] [[Arrays and Hashing#[Number of Laser Beams in a Bank (2125)](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) |Number of Laser Beams in a Bank - 01/03/2024]]
 - [x] [[Arrays and Hashing#[Minimum Number of Operations to Make Array Empty (2870)](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty/) |Minimum Number of Operations to Make Array Empty - 01/04/2024]]
+- [x] [[Arrays and Hashing#[Number of Good Pairs (1512)](https://leetcode.com/problems/number-of-good-pairs/description/) |Number of Good Pairs - 01/08/2024]]
 
 
 
@@ -830,6 +831,43 @@ def minOperations(self, nums: List[int]) -> int:
 			total += weight
 
 	return total
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Number of Good Pairs (1512)](https://leetcode.com/problems/number-of-good-pairs/description/)
+###### *01/08/2024*
+
+###### Psuedo Code
+``` 
+# seen set
+```
+
+###### Python Solution
+```python
+def numIdenticalPairs(self, nums: List[int]) -> int:
+	N = len(nums)
+	count = 0
+	seen = {} # number: count
+
+	for i in range(N):
+		if nums[i] in seen:
+			count += seen[nums[i]]
+			seen[nums[i]] += 1
+		else:
+			seen[nums[i]] = 1
+
+	return count
 ```
 
 ###### Runtime Complexity
