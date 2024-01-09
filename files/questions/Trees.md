@@ -12,6 +12,7 @@
 - [ ] [[Trees#[Count Good Nodes in Binary Tree (1448)](https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/) |Count Good Nodes in Binary Tree - 08/26/2023]]
 - [ ] [[Trees#[Validate Binary Search Tree (98)](https://leetcode.com/problems/validate-binary-search-tree/description/) |Validate Binary Search Tree - 08/27/2023]]
 - [x] [[Trees#[Range Sum of BST (938)](https://leetcode.com/problems/range-sum-of-bst/) |Range Sum of BST - 01/07/2024]]
+- [x] [[Trees#[Leaf-Similar Trees (872)](https://leetcode.com/problems/leaf-similar-trees/) |Leaf-Similar Trees - 01/08/2024]]
 
 
 
@@ -464,6 +465,53 @@ def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
 			stack.append(curr.right) 
 
 	return range_sum
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Leaf-Similar Trees (872)](https://leetcode.com/problems/leaf-similar-trees/)
+###### *01/08/2024*
+
+###### Psuedo Code
+``` 
+# helper function, dfs, returns set of sequence
+```
+
+###### Python Solution
+```python
+def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
+	def buildLeafValueSeq(root):
+		seq = []
+		stack = [root]
+
+		while stack:
+			curr = stack.pop()
+
+			if not curr.left and not curr.right:
+				seq.append(curr.val)
+
+			if curr.left:
+				stack.append(curr.left)
+
+			if curr.right:
+				stack.append(curr.right)
+
+		return seq
+
+	one = buildLeafValueSeq(root1)
+	two = buildLeafValueSeq(root2)
+
+	return one == two
 ```
 
 ###### Runtime Complexity
