@@ -13,6 +13,7 @@
 - [ ] [[Trees#[Validate Binary Search Tree (98)](https://leetcode.com/problems/validate-binary-search-tree/description/) |Validate Binary Search Tree - 08/27/2023]]
 - [x] [[Trees#[Range Sum of BST (938)](https://leetcode.com/problems/range-sum-of-bst/) |Range Sum of BST - 01/07/2024]]
 - [x] [[Trees#[Leaf-Similar Trees (872)](https://leetcode.com/problems/leaf-similar-trees/) |Leaf-Similar Trees - 01/08/2024]]
+- [x] [[Trees#[Amount of Time for Binary Tree to be Infected (2385)](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/) |Amount of Time for Binary Tree to be Infected - 01/09/2024]]
 
 
 
@@ -512,6 +513,80 @@ def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> b
 	two = buildLeafValueSeq(root2)
 
 	return one == two
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Amount of Time for Binary Tree to be Infected (2385)](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/)
+###### *01/09/2024*
+
+###### Psuedo Code
+``` 
+# build a graph, adj list, then dfs starting at start to find maximum depth
+
+```
+
+###### Python Solution
+```python
+def amountOfTime(self, root: Optional[TreeNode], start: int) -> int:
+	max_depth = 0
+
+	adj = self.buildAdjList(root)
+	stack = [(start, 0)]
+	visited = set()
+	print(adj)
+
+	while stack:
+		curr = stack.pop()
+		val, depth = curr
+		
+		visited.add(val)
+		max_depth = max(max_depth, depth)
+
+		print(val)
+		for neighbor in adj[val]:
+			if neighbor in visited:
+				continue
+			stack.append((neighbor, depth+1))
+
+	return max_depth
+	
+def buildAdjList(self, root: Optional[TreeNode]) -> dict:
+	adj = {}
+
+	stack = [root]
+	while stack:
+		curr = stack.pop()
+
+		if curr.val not in adj:
+			adj[curr.val] = []
+
+		if curr.left:
+			adj[curr.val].append(curr.left.val)
+			if curr.left.val not in adj:
+				adj[curr.left.val] = []
+			adj[curr.left.val].append(curr.val)
+			stack.append(curr.left)
+
+		if curr.right:
+			adj[curr.val].append(curr.right.val)
+			if curr.right.val not in adj:
+				adj[curr.right.val] = []
+			adj[curr.right.val].append(curr.val)
+			stack.append(curr.right)
+
+	return adj
+
 ```
 
 ###### Runtime Complexity

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Arrays and Hashing.md",
+                "file": "files/questions/Trees.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Arrays and Hashing.md",
+                "file": "files/questions/Trees.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Arrays and Hashing.md",
+                "file": "files/questions/Trees.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Arrays and Hashing.md"
+                "file": "files/questions/Trees.md"
               }
             }
           }
@@ -164,6 +164,7 @@
   },
   "active": "27ba089603438ae4",
   "lastOpenFiles": [
+    "files/questions/Arrays and Hashing.md",
     "files/questions/Trees.md",
     "files/questions/Dynamic Programming.md",
     "files/questions/Random Questions.md",
@@ -173,7 +174,6 @@
     "files/templates/Algorithm Template.md",
     "files/templates/Question Template.md",
     "files/questions/Two Pointers.md",
-    "files/questions/Arrays and Hashing.md",
     "files/Python Useful Functions.md",
     "files/Algorithms.md",
     "files/questions/Stack.md",
