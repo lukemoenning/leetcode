@@ -10,7 +10,7 @@
 - [ ] [[Trees#[Binary Tree Level Order Traversal (102)](https://leetcode.com/problems/binary-tree-level-order-traversal/description/) |Binary Tree Level Order Traversal - 08/26/2023]]
 - [ ] [[Trees#[Binary Tree Right Side View (199)](https://leetcode.com/problems/binary-tree-right-side-view/description/) |Binary Tree Right Side View - 08/26/2023]]
 - [ ] [[Trees#[Count Good Nodes in Binary Tree (1448)](https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/) |Count Good Nodes in Binary Tree - 08/26/2023]]
-- [ ] [[Trees#[Validate Binary Search Tree (98)](https://leetcode.com/problems/validate-binary-search-tree/description/) |Validate Binary Search Tree - 08/27/2023]]
+- [x] [[Trees#[Validate Binary Search Tree (98)](https://leetcode.com/problems/validate-binary-search-tree/description/) |Validate Binary Search Tree - 08/27/2023]]
 - [x] [[Trees#[Range Sum of BST (938)](https://leetcode.com/problems/range-sum-of-bst/) |Range Sum of BST - 01/07/2024]]
 - [x] [[Trees#[Leaf-Similar Trees (872)](https://leetcode.com/problems/leaf-similar-trees/) |Leaf-Similar Trees - 01/08/2024]]
 - [x] [[Trees#[Amount of Time for Binary Tree to be Infected (2385)](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/) |Amount of Time for Binary Tree to be Infected - 01/09/2024]]
