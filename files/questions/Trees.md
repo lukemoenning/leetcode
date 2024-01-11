@@ -14,7 +14,7 @@
 - [x] [[Trees#[Range Sum of BST (938)](https://leetcode.com/problems/range-sum-of-bst/) |Range Sum of BST - 01/07/2024]]
 - [x] [[Trees#[Leaf-Similar Trees (872)](https://leetcode.com/problems/leaf-similar-trees/) |Leaf-Similar Trees - 01/08/2024]]
 - [x] [[Trees#[Amount of Time for Binary Tree to be Infected (2385)](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/) |Amount of Time for Binary Tree to be Infected - 01/09/2024]]
-- [ ] [[Trees#[Maximum Difference Between Node and Ancestor (1026)](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/description/) |Maximum Difference Between Node and Ancestor - 01/10/2024]]
+- [x] [[Trees#[Maximum Difference Between Node and Ancestor (1026)](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/description/) |Maximum Difference Between Node and Ancestor - 01/10/2024]]
 
 
 
