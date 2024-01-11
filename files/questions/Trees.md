@@ -14,6 +14,7 @@
 - [x] [[Trees#[Range Sum of BST (938)](https://leetcode.com/problems/range-sum-of-bst/) |Range Sum of BST - 01/07/2024]]
 - [x] [[Trees#[Leaf-Similar Trees (872)](https://leetcode.com/problems/leaf-similar-trees/) |Leaf-Similar Trees - 01/08/2024]]
 - [x] [[Trees#[Amount of Time for Binary Tree to be Infected (2385)](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/) |Amount of Time for Binary Tree to be Infected - 01/09/2024]]
+- [ ] [[Trees#[Maximum Difference Between Node and Ancestor (1026)](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/description/) |Maximum Difference Between Node and Ancestor - 01/10/2024]]
 
 
 
@@ -587,6 +588,48 @@ def buildAdjList(self, root: Optional[TreeNode]) -> dict:
 
 	return adj
 
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Maximum Difference Between Node and Ancestor (1026)](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/description/)
+###### *01/10/2024*
+
+###### Psuedo Code
+``` 
+# dfs, passing high and low values to each node, update high and low as we traverse and update max_depth as well
+```
+
+###### Python Solution
+```python
+def maxAncestorDiff(self, root: Optional[TreeNode]) -> int:
+	if not root:
+		return 0
+
+	stack = [(root, root.val, root.val)] # node, high, low
+	max_depth = 0
+
+	while stack:
+		node, high, low = stack.pop()
+		max_depth = max(max_depth, abs(high-node.val), abs(low-node.val))
+		
+		if node.left:
+			stack.append((node.left, max(high, node.val), min(low, node.val)))
+
+		if node.right:
+			stack.append((node.right, max(high, node.val), min(low, node.val)))
+
+	return max_depth
 ```
 
 ###### Runtime Complexity
