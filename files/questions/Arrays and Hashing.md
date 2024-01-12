@@ -21,6 +21,7 @@
 - [x] [[Arrays and Hashing#[Number of Laser Beams in a Bank (2125)](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) |Number of Laser Beams in a Bank - 01/03/2024]]
 - [x] [[Arrays and Hashing#[Minimum Number of Operations to Make Array Empty (2870)](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty/) |Minimum Number of Operations to Make Array Empty - 01/04/2024]]
 - [x] [[Arrays and Hashing#[Number of Good Pairs (1512)](https://leetcode.com/problems/number-of-good-pairs/description/) |Number of Good Pairs - 01/08/2024]]
+- [x] [[Arrays and Hashing#[Determine if String Halves are Alike (1704)](https://leetcode.com/problems/determine-if-string-halves-are-alike) |Determine if String Halves are Alike - 01/11/2024]]
 
 
 
@@ -868,6 +869,55 @@ def numIdenticalPairs(self, nums: List[int]) -> int:
 			seen[nums[i]] = 1
 
 	return count
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Determine if String Halves are Alike (1704)](https://leetcode.com/problems/determine-if-string-halves-are-alike)
+###### *01/11/2024*
+
+###### Psuedo Code
+``` 
+# helper to count vowels using Counter
+```
+
+###### Python Solution
+```python
+def halvesAreAlike(self, s: str) -> bool:
+	if not s:
+		return 0
+
+	N = len(s)
+	mid = N//2
+	first = self.countVowels(s[:mid])
+	second = self.countVowels(s[mid:])
+
+	return first == second
+
+
+def countVowels(self, s: str) -> int:
+	if not s:
+		return 0
+
+	vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+	counts = Counter(s)
+	num = 0
+
+	for vowel in vowels:
+		if vowel in counts:
+			num += counts[vowel]
+
+	return num
 ```
 
 ###### Runtime Complexity
