@@ -22,6 +22,7 @@
 - [x] [[Arrays and Hashing#[Minimum Number of Operations to Make Array Empty (2870)](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty/) |Minimum Number of Operations to Make Array Empty - 01/04/2024]]
 - [x] [[Arrays and Hashing#[Number of Good Pairs (1512)](https://leetcode.com/problems/number-of-good-pairs/description/) |Number of Good Pairs - 01/08/2024]]
 - [x] [[Arrays and Hashing#[Determine if String Halves are Alike (1704)](https://leetcode.com/problems/determine-if-string-halves-are-alike) |Determine if String Halves are Alike - 01/11/2024]]
+- [ ] [[Arrays and Hashing#[Minimum Number of Steps to Make Two Strings Anagram (1347)](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/) |Minimum Number of Steps to Make Two Strings Anagram - 01/12/2024]]
 
 
 
@@ -918,6 +919,36 @@ def countVowels(self, s: str) -> int:
 			num += counts[vowel]
 
 	return num
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Minimum Number of Steps to Make Two Strings Anagram (1347)](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/)
+###### *01/12/2024*
+
+###### Psuedo Code
+``` 
+# return N - the count of the values in the union of Counters
+```
+
+###### Python Solution
+```python
+def minSteps(self, s: str, t: str) -> int:
+	N = len(s)
+	s_counts = Counter(s)
+	t_counts = Counter(t)
+	
+	return N - sum((s_counts&t_counts).values())
 ```
 
 ###### Runtime Complexity
