@@ -23,6 +23,7 @@
 - [x] [[Arrays and Hashing#[Number of Good Pairs (1512)](https://leetcode.com/problems/number-of-good-pairs/description/) |Number of Good Pairs - 01/08/2024]]
 - [x] [[Arrays and Hashing#[Determine if String Halves are Alike (1704)](https://leetcode.com/problems/determine-if-string-halves-are-alike) |Determine if String Halves are Alike - 01/11/2024]]
 - [ ] [[Arrays and Hashing#[Minimum Number of Steps to Make Two Strings Anagram (1347)](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/) |Minimum Number of Steps to Make Two Strings Anagram - 01/12/2024]]
+- [x] [[Arrays and Hashing#[Determine if Two Strings Are Close (1657)](https://leetcode.com/problems/determine-if-two-strings-are-close/description/) |Determine if Two Strings Are Close - 01/13/2024]]
 
 
 
@@ -954,6 +955,32 @@ def minSteps(self, s: str, t: str) -> int:
 ###### Runtime Complexity
 ```
 O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Determine if Two Strings Are Close (1657)](https://leetcode.com/problems/determine-if-two-strings-are-close/description/)
+###### *01/13/2024*
+
+###### Psuedo Code
+``` 
+# both Counter values and keys should be the same when sorted
+```
+
+###### Python Solution
+```python
+def closeStrings(self, word1: str, word2: str) -> bool:
+        return (sorted(Counter(word1).values()) == sorted(Counter(word2).values())) and (sorted(Counter(word1).keys()) == sorted(Counter(word2).keys()))
+```
+
+###### Runtime Complexity
+```
+O(nlogn)
 ```
 
 ###### Space Complexity
