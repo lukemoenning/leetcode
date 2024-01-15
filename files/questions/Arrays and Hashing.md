@@ -24,6 +24,7 @@
 - [x] [[Arrays and Hashing#[Determine if String Halves are Alike (1704)](https://leetcode.com/problems/determine-if-string-halves-are-alike) |Determine if String Halves are Alike - 01/11/2024]]
 - [ ] [[Arrays and Hashing#[Minimum Number of Steps to Make Two Strings Anagram (1347)](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/) |Minimum Number of Steps to Make Two Strings Anagram - 01/12/2024]]
 - [x] [[Arrays and Hashing#[Determine if Two Strings Are Close (1657)](https://leetcode.com/problems/determine-if-two-strings-are-close/description/) |Determine if Two Strings Are Close - 01/13/2024]]
+- [x] [[Arrays and Hashing#[Finding Players With Zero or One Losses (2225)](https://leetcode.com/problems/find-players-with-zero-or-one-losses/description/) |Finding Players With Zero or One Losses - 01/14/2024]]
 
 
 
@@ -980,12 +981,64 @@ def closeStrings(self, word1: str, word2: str) -> bool:
 
 ###### Runtime Complexity
 ```
+O(n)
+```
+
+###### Space Complexity
+```
+O(1)
+```
+
+
+---
+## [Finding Players With Zero or One Losses (2225)](https://leetcode.com/problems/find-players-with-zero-or-one-losses/description/)
+###### *01/14/2024*
+
+###### Psuedo Code
+``` 
+# dict to keep track of player records
+```
+
+###### Python Solution
+```python
+def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
+	players = {} # id, [played, wins]
+	res = [[], []]
+
+	for match in matches:
+		winner, loser = match
+
+		if winner not in players:
+			players[winner] = [0, 0]
+		if loser not in players:
+			players[loser] = [0,0]
+
+		players[winner][0] += 1
+		players[winner][1] += 1
+		players[loser][0] += 1
+
+	for player_id in players:
+		played, wins = players[player_id]
+
+		if played - wins == 0:
+			heapq.heappush(res[0], player_id)
+		if played - wins == 1:
+			heapq.heappush(res[1], player_id)
+
+	res[0] = [heapq.heappop(res[0]) for _ in range(len(res[0]))]
+	res[1] = [heapq.heappop(res[1]) for _ in range(len(res[1]))]
+
+	return res
+```
+
+###### Runtime Complexity
+```
 O(nlogn)
 ```
 
 ###### Space Complexity
 ```
-O(n)
+O(1)
 ```
 
 
