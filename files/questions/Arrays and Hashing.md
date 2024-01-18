@@ -26,6 +26,7 @@
 - [x] [[Arrays and Hashing#[Determine if Two Strings Are Close (1657)](https://leetcode.com/problems/determine-if-two-strings-are-close/description/) |Determine if Two Strings Are Close - 01/13/2024]]
 - [x] [[Arrays and Hashing#[Finding Players With Zero or One Losses (2225)](https://leetcode.com/problems/find-players-with-zero-or-one-losses/description/) |Finding Players With Zero or One Losses - 01/14/2024]]
 - [ ] [[Arrays and Hashing#[Insert Delete GetRandom O(1) (380)](https://leetcode.com/problems/insert-delete-getrandom-o1/description/) |Insert Delete GetRandom O(1) - 01/15/2024]]
+- [x] [[Arrays and Hashing#[Unique Number of Occurences (1207)](https://leetcode.com/problems/unique-number-of-occurrences/description/) |Unique Number of Occurences - 01/16/2024]]
 
 
 
@@ -1084,6 +1085,32 @@ def getRandom(self) -> int:
 ###### Runtime Complexity
 ```
 O(1)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Unique Number of Occurences (1207)](https://leetcode.com/problems/unique-number-of-occurrences/description/)
+###### *01/16/2024*
+
+###### Psuedo Code
+``` 
+# counters
+```
+
+###### Python Solution
+```python
+def uniqueOccurrences(self, arr: List[int]) -> bool:
+	return len(set(Counter(arr).values())) == len(Counter(arr).values())
+```
+
+###### Runtime Complexity
+```
+O(n)
 ```
 
 ###### Space Complexity
