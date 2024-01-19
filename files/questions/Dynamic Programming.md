@@ -10,6 +10,7 @@
 - [ ] [[Dynamic Programming#[Decode Ways (91)](https://leetcode.com/problems/decode-ways/description) |Decode Ways - 12/25/2023]]
 - [ ] [[Dynamic Programming#[Number of Dice Rolls With Target Sum (1155)](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/description/) |Number of Dice Rolls With Target Sum - 12/26/2023]]
 - [ ] [[Dynamic Programming#[Longest Increasing Subsequence (300)](https://leetcode.com/problems/longest-increasing-subsequence/description/) |Longest Increasing Subsequence - 01/05/2024]]
+- [ ] [[Dynamic Programming#[Minimum Falling Path Sum (931)](https://leetcode.com/problems/minimum-falling-path-sum/description/) |Minimum Falling Path Sum - 01/18/2024]]
 ---
 ## [Climbing Stairs (70)](https://leetcode.com/problems/climbing-stairs/description/)
 ###### *09/06/2023*
@@ -454,6 +455,75 @@ O(nlogn)
 ###### Space Complexity
 ```
 O(n)
+```
+
+
+---
+## [Minimum Falling Path Sum (931)](https://leetcode.com/problems/minimum-falling-path-sum/description/)
+###### *01/18/2024*
+
+###### Psuedo Code
+``` 
+# search problem, trying to minimize score, dfs over state space tree
+# optimized: dp, bottom up tabulation starting from the end
+```
+
+###### Python Solution
+```python
+# def minFallingPathSum(self, matrix: List[List[int]]) -> int:
+#     N = len(matrix)
+#     actions = [(1, -1), (1, 0), (1, 1)]
+#     min_score = 10**7
+
+#     def in_bounds(s):
+#         return (0 <= s[0] < N) and (0 <= s[1] < N)
+
+#     def reward(s):
+#         return matrix[s[0]][s[1]]
+	
+#     def is_goal_state(s):
+#         return s[0] == N-1
+
+#     stack = [((0, col), reward((0, col))) for col in range(N)]
+
+#     while stack:
+#         s, score = stack.pop()
+#         r = reward(s)
+
+#         if is_goal_state(s):
+#             min_score = min(min_score, score)
+#             continue
+
+#         for a in actions:
+#             s_prime = (s[0]+a[0], s[1]+a[1])
+#             if in_bounds(s_prime):
+#                 r_prime = reward(s_prime)
+#                 stack.append((s_prime, r_prime + score))
+
+#     return min_score
+
+
+def minFallingPathSum(self, matrix: List[List[int]]) -> int:
+	N = len(matrix)
+
+	for r in range(N - 2, -1, -1):
+		for c in range(N):
+			down = matrix[r + 1][c]
+			down_left = matrix[r + 1][c - 1] if c > 0 else float('inf')
+			down_right = matrix[r + 1][c + 1] if c < N - 1 else float('inf')
+			matrix[r][c] += min(down, down_left, down_right)
+
+	return min(matrix[0])
+```
+
+###### Runtime Complexity
+```
+O(n^2)
+```
+
+###### Space Complexity
+```
+O(1)
 ```
 
 
