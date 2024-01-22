@@ -27,6 +27,7 @@
 - [x] [[Arrays and Hashing#[Finding Players With Zero or One Losses (2225)](https://leetcode.com/problems/find-players-with-zero-or-one-losses/description/) |Finding Players With Zero or One Losses - 01/14/2024]]
 - [ ] [[Arrays and Hashing#[Insert Delete GetRandom O(1) (380)](https://leetcode.com/problems/insert-delete-getrandom-o1/description/) |Insert Delete GetRandom O(1) - 01/15/2024]]
 - [x] [[Arrays and Hashing#[Unique Number of Occurences (1207)](https://leetcode.com/problems/unique-number-of-occurrences/description/) |Unique Number of Occurences - 01/16/2024]]
+- [x] [[Arrays and Hashing#[Set Mismatch (645)](https://leetcode.com/problems/set-mismatch/description) |Set Mismatch - 01/21/2024]]
 
 
 
@@ -1106,6 +1107,45 @@ O(n)
 ```python
 def uniqueOccurrences(self, arr: List[int]) -> bool:
 	return len(set(Counter(arr).values())) == len(Counter(arr).values())
+```
+
+###### Runtime Complexity
+```
+O(n)
+```
+
+###### Space Complexity
+```
+O(n)
+```
+
+
+---
+## [Set Mismatch (645)](https://leetcode.com/problems/set-mismatch/description)
+###### *01/21/2024*
+
+###### Psuedo Code
+``` 
+# find max, build a Counter, iterate through to max to find missing and dupe, if no missing, then max+1 is missing
+```
+
+###### Python Solution
+```python
+def findErrorNums(self, nums: List[int]) -> List[int]:
+	maxi = max(nums)
+	counts = Counter(nums)
+	res = [-1, -1]
+
+	for num in range(1, maxi+1):
+		if num not in counts:
+			res[1] = num
+		elif counts[num] == 2:
+			res[0] = num
+
+	if res[1] == -1:
+		res[1] = maxi+1
+
+	return res
 ```
 
 ###### Runtime Complexity
