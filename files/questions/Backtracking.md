@@ -3,6 +3,7 @@
 
 - [ ] [[Backtracking#[Subsets (78)](https://leetcode.com/problems/subsets/description/) |Subsets - 08/28/2023]]
 - [ ] [[Backtracking#[Permutations (46)](https://leetcode.com/problems/permutations/description/) |Permutations - 09/04/2023]]
+- [ ] [[Backtracking#[Maximum Length of a Concatenated String with Unique Characters (1239)](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/description/) |Maximum Length of a Concatenated String with Unique Characters - 01/22/2024]]
 
 
 ---
@@ -91,6 +92,51 @@ O(n * n!)
 ###### Space Complexity
 ```
 O(n)
+```
+
+
+---
+## [Maximum Length of a Concatenated String with Unique Characters (1239)](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/description/)
+###### *01/22/2024*
+
+###### Psuedo Code
+``` 
+# backtracking
+```
+
+###### Python Solution
+```python
+def maxLength(self, arr: List[str]) -> int:
+	if not arr:
+		return 0
+
+	N = len(arr)
+
+	def is_unique(s):
+		return len(s) == len(set(s))
+
+	def recur(i, s):
+		# base case
+		if i == N:
+			return len(s)
+
+		# recursive step
+		leave = recur(i+1, s)
+		take = recur(i+1, s+arr[i]) if is_unique(s+arr[i]) else -1
+
+		return max(leave, take)
+
+	return recur(0, '')
+```
+
+###### Runtime Complexity
+```
+O(2^n)
+```
+
+###### Space Complexity
+```
+O(2^n)
 ```
 
 
