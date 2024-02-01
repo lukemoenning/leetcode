@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "files/questions/Backtracking.md",
+                "file": "files/questions/Sliding Window.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "files/questions/Backtracking.md",
+                "file": "files/questions/Sliding Window.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "files/questions/Backtracking.md",
+                "file": "files/questions/Sliding Window.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "files/questions/Backtracking.md"
+                "file": "files/questions/Sliding Window.md"
               }
             }
           }
@@ -164,10 +164,11 @@
   },
   "active": "27ba089603438ae4",
   "lastOpenFiles": [
+    "files/questions/Stack.md",
+    "files/questions/Backtracking.md",
     "files/questions/Arrays and Hashing.md",
     "files/questions/Dynamic Programming.md",
     "files/questions/Random Questions.md",
-    "files/questions/Backtracking.md",
     "files/questions/Trees.md",
     "files/Backtracking.md",
     "files/questions/Binary Search.md",
@@ -177,7 +178,6 @@
     "files/questions/Two Pointers.md",
     "files/Python Useful Functions.md",
     "files/Algorithms.md",
-    "files/questions/Stack.md",
     "files/questions/().md",
     "files/questions/Linked List.md",
     "files/questions/Sliding Window.md",
